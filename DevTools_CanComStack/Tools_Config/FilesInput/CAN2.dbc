@@ -1,0 +1,1816 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: APU BCU DCH DCL MCU TMS VIU VIU1 WBS
+
+
+BO_ 784 CAN2_APU_VIU_0x310: 8 APU
+ SG_ Apu2EngSts : 5|3@0+ (1,0) [0|7] ""  VIU
+ SG_ Apu2ActvEngTorque : 2|12@0+ (1,-1250) [-1250|1250] "Nm"  VIU
+ SG_ Apu2EngCtrlModSts : 7|2@0+ (1,0) [0|3] ""  VIU
+ SG_ Apu2EngSpdActv : 22|13@0+ (1,0) [0|8000] "rpm"  VIU
+ SG_ Apu2EngOilPressure : 25|12@0+ (0.055,0) [0|220] "mPa"  VIU
+ SG_ EngpctLoad2 : 45|10@0+ (0.1,0) [0|100] "%"  VIU
+ SG_ Ecu2FltRnks : 57|2@0+ (1,0) [0|3] ""  VIU
+ SG_ Ecu2ErrNo : 51|10@0+ (1,0) [0|1000] ""  VIU
+
+BO_ 785 CAN2_APU_VIU_0x311: 8 APU
+ SG_ Apu2IsgMod : 7|4@0+ (1,0) [0|15] ""  VIU
+ SG_ Apu2FltRnk : 3|2@0+ (1,0) [0|3] ""  VIU
+ SG_ Apu2PwrOutp : 20|11@0+ (0.1,-150) [-150|50] "kW"  VIU
+ SG_ Apu2Spd : 1|13@0+ (5,-15000) [-15000|15000] "rpm"  VIU
+ SG_ Apu2CtrlMod : 25|4@0+ (1,0) [0|15] ""  VIU
+ SG_ Apu2LimtSpd : 37|12@0+ (5,-8000) [-8000|8000] "rpm"  VIU
+ SG_ Apu2ErrNr : 55|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Apu2ErrTot : 63|8@0+ (1,0) [0|255] ""  VIU
+
+BO_ 788 CAN2_APU_VIU_0x314: 8 APU
+ SG_ ISG2ElecMotRealTq : 1|10@0+ (1,-250) [-250|250] "Nm"  VIU
+ SG_ ISG2MaxAvlTq : 23|8@0+ (1,0) [0|250] "Nm"  VIU
+ SG_ ISG2MinAvlTq : 31|8@0+ (1,-250) [-250|0] "Nm"  VIU
+
+BO_ 786 CAN2_APU_VIU_0x312: 8 APU
+ SG_ Apu2MotT : 7|8@0+ (1,-50) [-50|200] "℃"  VIU
+ SG_ Apu2McuT : 15|8@0+ (1,-50) [-50|200] "℃"  VIU
+ SG_ Apu2ACI : 23|12@0+ (1,0) [0|1500] "A"  VIU
+ SG_ Apu2DCI : 27|11@0+ (1,-1000) [-1000|1000] "A"  VIU
+ SG_ Apu2DCU : 49|10@0+ (1,0) [0|1000] "V"  VIU
+ SG_ Apu2PwrMaxAllw : 46|10@0+ (1,0) [0|1000] "kW"  VIU
+
+BO_ 787 CAN2_APU_VIU_0x313: 8 APU
+ SG_ Apu2ISGPhaCurrHiFault : 7|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGMotSpdHiFault : 6|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGDcLinkVoltHiFault : 5|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGDcLinkVoltLoFault : 4|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGMotBlockFault : 3|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGMcuTempHiFault : 2|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGMotTempHiFault : 1|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGHwFault : 0|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGCmuFault : 15|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGEStopActv : 14|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Apu2ISGErrNr : 23|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Apu2ISGErrTot : 31|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Apu2ISGFltRank : 39|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Apu2TqReq : 50|11@0+ (0.5,-500) [-500|500] "Nm"  VIU
+ SG_ Apu2SpdReq : 47|13@0+ (5,0) [0|10000] "rpm"  VIU
+
+BO_ 1601 CAN2_APU_VIU_0x641: 8 APU
+ SG_ Apu2IntakeAirTemp : 7|8@0+ (1,-40) [-40|210] "℃"  VIU
+ SG_ Apu2EngCoolgT : 15|8@0+ (1,-40) [-40|210] "℃"  VIU
+ SG_ Apu2POWERBattU : 29|5@0+ (1,0) [0|30] "V"  VIU
+ SG_ Apu2AmbientAirPressure : 23|10@0+ (1,0) [0|1000] "kPa"  VIU
+ SG_ Apu2MaxTorqueAvl : 46|12@0+ (1,-1250) [-1250|1250] "Nm"  VIU
+ SG_ Apu2EngFuelCons : 24|10@0+ (0.05,0) [0|51] "mL"  VIU
+ SG_ Apu2EngLubeOilP : 50|11@0+ (1,0) [0|1000] "kPa"  VIU
+
+BO_ 385 CAN2_BCU_VIU_0x181: 8 BCU
+ SG_ BCU2MaxDischrgPwrContns : 7|8@0+ (0.5,0) [0|125] "kW"  VIU
+ SG_ BCU2EgyFbAllwdchrgPwrContns : 15|8@0+ (0.5,0) [0|125] "kW"  VIU
+ SG_ BCU2MaxDischrgCur : 23|10@0+ (1,0) [0|500] "kW"  VIU
+ SG_ BCU2EgyFbAllwdchrgCur : 29|10@0+ (1,0) [0|500] "A"  VIU
+ SG_ BCU2MinDischrgVol : 35|10@0+ (1,0) [0|800] "V"  VIU
+ SG_ BCU2EgyFbAllwdchrgVol : 41|10@0+ (1,0) [0|800] "V"  VIU
+ SG_ BCU2HeatErr : 59|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CycCntr181 : 63|4@0+ (1,0) [0|15] "V"  VIU
+
+BO_ 386 CAN2_BCU_VIU_0x182: 8 BCU
+ SG_ BCU2DcContUSig : 7|8@0+ (0.1,0) [0|20] "V"  VIU
+ SG_ BCU2manufacturerInfo : 18|3@0+ (1,0) [0|7] ""  VIU
+ SG_ BCU2pauseChargeFault : 21|3@0+ (1,0) [0|7] ""  VIU
+ SG_ BCU2Insulated : 15|10@0+ (1,0) [0|1000] "kΩ"  VIU
+ SG_ Batt2PwrChrgPeakval10Sec : 31|8@0+ (0.5,0) [0|125] "kW"  VIU
+ SG_ Batt2PwrDchrgPeakval10Sec : 39|8@0+ (0.5,0) [0|125] "kW"  VIU
+ SG_ BCU2ErrCode : 47|8@0+ (1,0) [0|255] ""  VIU
+ SG_ BCU2DCDCBackVol : 55|7@0+ (5,0) [0|635] "V"  VIU
+ SG_ BCU2NegRlyClsd : 57|1@0+ (1,0) [0|1] ""  VIU
+
+BO_ 387 CAN2_BCU_VIU_0x183: 8 BCU
+ SG_ BCU2BattVol : 7|16@0+ (0.1,0) [0|800] "V"  VIU
+ SG_ BCU2BattCur : 23|16@0+ (0.1,-500) [-500|500] "A"  VIU
+ SG_ BCU2EquiliBrtnNowSt : 40|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2PreRlyClsd : 41|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2MaiRlyClsd : 42|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2FaultLevel : 45|3@0+ (1,0) [0|4] ""  VIU
+ SG_ BCU2BattSOC : 39|10@0+ (0.1,0) [0|100] "%"  VIU
+ SG_ BCU2CycCntr183 : 51|4@0+ (1,0) [0|15] ""  VIU
+ SG_ BCU2OperMod : 55|4@0+ (1,0) [0|15] ""  VIU
+ SG_ BCU2PwrUpAllw : 56|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2ChrgMod : 57|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2ChrgSts : 59|2@0+ (1,0) [0|3] ""  VIU
+ SG_ BCU2DChrgRlyClsd : 60|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CoolgReq : 62|1@0+ (1,0) [0|1] ""  VIU
+
+BO_ 1297 CAN2_BCU_VIU_0x511: 8 BCU
+ SG_ BCU2MaxBattTemp : 7|8@0+ (1,-40) [-40|125] "℃"  VIU
+ SG_ BCU2MinBattTemp : 15|8@0+ (1,-40) [-40|125] "℃"  VIU
+ SG_ BCU2MaxTempModNum : 23|8@0+ (1,0) [1|120] ""  VIU
+ SG_ BCU2MinTempModNum : 31|8@0+ (1,0) [1|120] ""  VIU
+ SG_ BCU2AvrgBattTemp : 39|8@0+ (1,-40) [-40|125] "℃"  VIU
+ SG_ BCU2PermMaxBattTemp : 47|8@0+ (1,-40) [-40|125] "℃"  VIU
+ SG_ BCU2PermMinBattTemp : 55|8@0+ (1,-40) [-40|125] "℃"  VIU
+ SG_ BCU2SOH : 63|8@0+ (1,0) [0|100] "%"  VIU
+
+BO_ 1617 CAN2_BCU_VIU_0x651: 8 BCU
+ SG_ BCU2MaxCellVol : 7|16@0+ (0.001,0) [0|10.001] "V"  VIU
+ SG_ BCU2MinCellVol : 23|16@0+ (0.001,0) [0|10.001] "V"  VIU
+ SG_ BCU2MaxCellVolNum : 39|8@0+ (1,0) [1|110] ""  VIU
+ SG_ BCU2MinCellVolNum : 47|8@0+ (1,0) [1|110] ""  VIU
+ SG_ BCU2SOCMax : 55|8@0+ (1,0) [0|100] "%"  VIU
+ SG_ BCU2SOCMin : 63|8@0+ (1,0) [0|100] "%"  VIU
+
+BO_ 1618 CAN2_BCU_VIU_0x652: 8 BCU
+ SG_ BCU2CellDeltaVolRank2 : 0|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CellDeltaVolRank1 : 1|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CellUnderVolRank3 : 2|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CellUnderVolRank2 : 3|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CellUnderVolRank1 : 4|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CellOverVolRank3 : 5|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CellOverVolRank2 : 6|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CellOverVolRank1 : 7|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverCurtChrgRank3 : 8|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverCurtChrgRank2 : 9|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverCurtChrgRank1 : 10|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2PrechrgFailErr : 11|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2DCRlyPAdhErr : 12|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2MaiRlyPAdhErr : 13|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2MaiRlyNAdhErr : 14|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2CC2Err : 15|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverPeakCurtDischrgRank2 : 16|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverPeakCurtDischrgRank1 : 17|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverCurtDischrgRank3 : 18|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverCurtDischrgRank2 : 19|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverCurtDischrgRank1 : 20|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverPeakCurtChrgRank3 : 21|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverPeakCurtChrgRank2 : 22|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverPeakCurtChrgRank1 : 23|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattUnderTempRank2 : 24|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattOverTempRank4 : 25|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattOverTempRank3 : 26|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattOverTempRank2 : 27|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2ChrgErr : 28|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattSOHLo : 29|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2TotVolRatiErr : 30|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2OverPeakCurtDischrgRank3 : 31|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattOverURank2 : 32|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattOverVolRank1 : 33|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2InsuFlt4 : 34|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2InsuFlt2 : 35|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2HVILErr : 36|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2DeltaTempRank3 : 37|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2DeltaTempRank2 : 38|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattUnderTempRank3 : 39|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2SOCHopErr : 40|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2SOCcalcErr : 41|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattOverPwr : 42|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2DCchrgInsuFlt : 43|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattUnderVolRank3 : 44|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattUnderVolRank2 : 45|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattUnderURank1 : 46|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BattOverURank3 : 47|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2TotVolSnsrElecErr : 48|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2SlaveCALFAULT : 49|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2InlrCANErr : 50|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2ChrgCANErr : 51|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2VehCANErr : 52|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2BlcErr : 53|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2ChargerOverTemp3 : 54|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2ChargerOverTemp2 : 55|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2DCchrgTemErr : 57|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2EEpErr : 58|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2WatchDogErr : 59|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2ROMCheckErr : 60|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2RAMCheckErr : 61|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2TempSnsrElecErr : 62|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BCU2TotCurtSnsrElecErr : 63|1@0+ (1,0) [0|1] ""  VIU
+
+BO_ 1619 CAN2_BCU_VIU_0x653: 8 BCU
+ SG_ BCU2SoftVerx : 7|2@0+ (1,0) [0|3] ""  VIU
+ SG_ BCU2SoftVeryy : 5|7@0+ (1,0) [0|99] ""  VIU
+ SG_ BCU2SoftVerzz : 14|7@0+ (1,0) [0|99] ""  VIU
+ SG_ BCU2SoftVeryear : 23|7@0+ (1,2000) [2000|2099] ""  VIU
+ SG_ BCU2SoftVermonth : 16|4@0+ (1,0) [1|12] ""  VIU
+ SG_ BCU2SoftVerday : 28|5@0+ (1,0) [1|31] ""  VIU
+ SG_ BCU2TotalCapacity : 39|10@0+ (0.1,0) [0|100] "Ah"  VIU
+
+BO_ 1539 CAN2_DCH_VIU_0x603: 8 DCH
+ SG_ Dch2Mode : 1|2@0+ (1,0) [0|3] ""  VIU
+ SG_ Dch2OutputVol : 15|16@0+ (0.1,0) [0|6553.5] "V"  VIU
+ SG_ Dch2OutputCur : 31|16@0+ (0.1,0) [0|6553.5] "A"  VIU
+ SG_ Dch2FaultInfo : 47|16@0+ (1,0) [0|65535] ""  VIU
+ SG_ CAN2Cntr603 : 59|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 1540 CAN2_DCH_VIU_0x604: 8 DCH
+ SG_ Dch2InputVol : 7|16@0+ (0.1,0) [0|6553.5] "V"  VIU
+ SG_ Dch2MaxInterTemp : 23|8@0+ (1,-40) [-40|215] "℃"  VIU
+ SG_ Dch2InputCur : 31|8@0+ (0.1,0) [0|25.5] "A"  VIU
+ SG_ Dch2EnableKL15 : 48|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Dch2Version : 39|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Dch2Live : 47|8@0+ (1,0) [0|255] ""  VIU
+ SG_ CAN2Cntr604 : 59|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 1537 CAN2_DCL_VIU_0x601: 8 DCL
+ SG_ Dcl2Mode : 1|2@0+ (1,0) [0|3] ""  VIU
+ SG_ Dcl2OutputVol : 15|16@0+ (0.1,0) [0|6553.5] "V"  VIU
+ SG_ Dcl2OutputCur : 31|16@0+ (0.1,0) [0|6553.5] "A"  VIU
+ SG_ Dcl2FaultInfo : 47|16@0+ (1,0) [0|65535] ""  VIU
+ SG_ CAN2Cntr601 : 59|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 1538 CAN2_DCL_VIU_0x602: 8 DCL
+ SG_ Dcl2InputVol : 7|16@0+ (0.1,0) [0|6553.5] "V"  VIU
+ SG_ Dcl2MaxInterTemp : 23|8@0+ (1,-40) [-40|215] "℃"  VIU
+ SG_ Dcl2InputCur : 31|8@0+ (0.1,0) [0|25.5] "A"  VIU
+ SG_ Dcl2EnableKL15 : 48|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Dcl2Version : 39|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Dcl2Live : 47|8@0+ (1,0) [0|255] ""  VIU
+ SG_ CAN2Cntr602 : 59|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 339 CAN2_MCU_VIU_0x153: 8 MCU
+ SG_ IPU2ElecMotSpd : 7|16@0+ (1,-25000) [-25000|25000] "rpm"  VIU
+ SG_ IPU2ElecMotRealTq : 23|10@0+ (1,-250) [-250|250] "Nm"  VIU
+ SG_ IPU2FactoryMssge : 29|2@0+ (1,0) [0|3] ""  VIU
+ SG_ IPU2DischrgSts : 27|4@0+ (1,0) [0|15] ""  VIU
+ SG_ Inv2FltRank : 37|2@0+ (1,0) [0|3] ""  VIU
+ SG_ IPU2FltRank : 39|2@0+ (1,0) [0|3] ""  VIU
+ SG_ IPU2OpenIGBTSts : 35|4@0+ (1,0) [0|15] ""  VIU
+ SG_ IPU2ID153CycCntr : 44|4@0+ (1,0) [0|15] ""  VIU
+ SG_ IPU2RdyForOper : 47|1@0+ (1,0) [0|1] ""  VIU
+ SG_ IPU2RdyToShtDwn : 46|1@0+ (1,0) [0|1] ""  VIU
+ SG_ IPU2RdyToPrechrg : 45|1@0+ (1,0) [0|1] ""  VIU
+ SG_ IPU2StrtRels : 40|1@0+ (1,0) [0|1] ""  VIU
+ SG_ IPU2MaxAvlTq : 55|8@0+ (1,0) [0|250] "Nm"  VIU
+ SG_ IPU2MinAvlTq : 63|8@0+ (1,-250) [-250|0] "Nm"  VIU
+
+BO_ 371 CAN2_MCU_VIU_0x173: 8 MCU
+ SG_ MCU2DcU : 7|10@0+ (1,0) [0|500] "V"  VIU
+ SG_ MCU2DcCrrt : 11|16@0+ (0.1,-500) [-500|500] "A"  VIU
+ SG_ MCU2PhaACrrt : 27|12@0+ (1,-800) [-800|800] "A"  VIU
+ SG_ MCU2PhaBCrrt : 47|12@0+ (1,-800) [-800|800] "A"  VIU
+ SG_ MCU2ElecMotEff : 51|12@0+ (0.1,0) [0|100] "%"  VIU
+
+BO_ 547 CAN2_MCU_VIU_0x223: 8 MCU
+ SG_ MCU2ElecMotT : 7|10@0+ (1,-50) [-50|200] "°C"  VIU
+ SG_ MCU2IGBTT : 12|10@0+ (1,-50) [-50|200] "°C"  VIU
+ SG_ MotorNo : 17|2@0+ (1,0) [0|3] ""  VIU
+ SG_ MCU2T : 31|8@0+ (1,-50) [-50|150] "°C"  VIU
+ SG_ MCU2SwVers : 39|17@0+ (1,0) [0|130000] ""  VIU
+ SG_ IPU2ErrNum : 54|7@0+ (1,0) [0|127] ""  VIU
+ SG_ IPU2ErrAmnt : 63|4@0+ (1,0) [0|15] ""  VIU
+ SG_ MCU2MotSts : 59|3@0+ (1,0) [0|7] ""  VIU
+
+BO_ 1155 CAN2_MCU_VIU_0x483: 8 MCU
+ SG_ CurrentLimitErr2 : 7|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2IGBTOverTL : 6|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2IGBTOverTH : 5|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotOverTL : 4|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotOverTH : 3|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2PwrOutpModFlt : 2|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2HardwareOverCurrent : 1|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotOverSpd : 0|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2HiUUnderUL : 15|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2HiUOverUL : 14|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2CANComErr : 13|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2DischrgErr : 12|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2SoftwareOverCurrent : 11|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotReslvErr : 10|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotThreePhaBreakErr : 9|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2HiUUnderUH : 8|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2HiUOverUH : 23|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2LowBatErr : 22|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTDATASELF : 21|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTUUPIGBT : 20|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTUDOWNIGBT : 19|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTVUPIGBT : 18|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTVDOWNIGBT : 17|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2HardwareOverU : 16|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTWUPIGBT : 31|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTWDOWNIGBT : 30|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2LowBatWarning : 29|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotOverSpdWarning : 28|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2IGBTTSnsrShoCircGnd : 27|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2IGBTTSnsrShoCircVcc : 26|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2OverLoadErr : 25|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2OverLoadWraning : 24|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotTSnsrShoCircGnd : 39|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotStopTurnErr : 38|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2ElecMotTSnsrOpenCirc : 37|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTHUOC : 36|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTHVOC : 35|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FAULTHWOC : 34|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2CurrentDetectErr : 33|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2TempErr : 32|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2rDriverUV : 47|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2PhaseShortCircuit : 46|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2FastUV : 45|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2alarmOTNTC : 44|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2OTNTC : 43|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2alarmOperateOrder : 42|1@0+ (1,0) [0|1] ""  VIU
+ SG_ EEPROMErr2 : 41|1@0+ (1,0) [0|1] ""  VIU
+ SG_ AngleDiffErr2 : 40|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2alarmHighSpeedStop : 55|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2alarmHighSpeedDir : 54|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2alarmHighTorqueStop : 53|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MCU2Dev : 52|1@0+ (1,0) [0|1] ""  VIU
+ SG_ errorCanBSend2 : 51|1@0+ (1,0) [0|1] ""  VIU
+ SG_ errorCanBReceive2 : 50|1@0+ (1,0) [0|1] ""  VIU
+ SG_ InterlockErr2 : 49|1@0+ (1,0) [0|1] ""  VIU
+ SG_ PTCAdhesion2 : 48|1@0+ (1,0) [0|1] ""  VIU
+
+BO_ 1156 CAN2_MCU_VIU_0x484: 8 MCU
+ SG_ MCU2ErrAmnt : 7|8@0+ (1,0) [0|255] ""  VIU
+ SG_ MCU2ErrNum1 : 15|8@0+ (1,0) [0|255] ""  VIU
+ SG_ MCU2ErrNum2 : 23|8@0+ (1,0) [0|255] ""  VIU
+ SG_ MCU2ErrNum3 : 31|8@0+ (1,0) [0|255] ""  VIU
+ SG_ MCU2ErrNum4 : 39|8@0+ (1,0) [0|255] ""  VIU
+ SG_ MCU2ErrNum5 : 47|8@0+ (1,0) [0|255] ""  VIU
+ SG_ MCU2ErrNum6 : 55|8@0+ (1,0) [0|255] ""  VIU
+ SG_ MCU2ErrNum7 : 63|8@0+ (1,0) [0|255] ""  VIU
+
+BO_ 289 CAN2_VIU_MCU_0x121: 8 VIU
+ SG_ VCU2ElecMotOperMod : 7|2@0+ (1,0) [0|3] ""  MCU
+ SG_ VCU2SysFltRank : 5|2@0+ (1,0) [0|3] ""  MCU
+ SG_ VCU2StrtAllwd : 3|1@0+ (1,0) [0|1] ""  MCU
+ SG_ VCU2MCUSpdDischrg : 2|1@0+ (1,0) [0|1] ""  MCU
+ SG_ VCU2PtWhlLocn : 49|2@0+ (1,0) [0|3] ""  MCU
+ SG_ VCU2MCUPwrDwn : 0|1@0+ (1,0) [0|1] ""  MCU
+ SG_ VCU2ReqTq : 15|10@0+ (1,-300) [-300|300] "Nm"  MCU
+ SG_ VCU2ReqSpd : 47|14@0+ (5,-10000) [0|10000] "rpm"  MCU
+ SG_ VCU2MaxPermTq : 27|10@0+ (1,-250) [-250|250] "Nm"  MCU
+ SG_ VCU2MinPermTq : 21|10@0+ (1,-250) [-250|250] "Nm"  MCU
+ SG_ VCU2PrecClsInfo : 63|1@0+ (1,0) [0|1] ""  MCU
+ SG_ VCU2MaiRlyClsInfo : 62|1@0+ (1,0) [0|1] ""  MCU
+ SG_ CAN2VCUID131CycCntr : 61|4@0+ (1,0) [0|14] ""  MCU
+
+BO_ 530 CAN2_VIU_WBS_0x212: 8 VIU
+ SG_ Prak2PressureLevel : 3|4@0+ (1,0) [0|10] "mPa"  WBS
+ SG_ RunningParking2Status : 5|2@0+ (1,0) [0|3] "mPa"  WBS
+ SG_ ESTOP2 : 15|2@0+ (1,0) [0|3] ""  WBS
+ SG_ ONIGNReady : 7|2@0+ (1,0) [0|3] ""  WBS
+ SG_ PressureTargetWBS2 : 13|10@0+ (0.0238,0) [0|10] "mPa"  WBS
+ SG_ Pressure2TargetWBS1 : 17|10@0+ (0.0238,0) [0|10] ""  WBS
+ SG_ VCU2VehicleSpeed : 39|8@0+ (1,0) [0|255] "kph"  WBS
+ SG_ vcuwbs02BR2 : 43|4@0+ (1,0) [0|15] ""  WBS
+ SG_ VcuWbs2PtWhlLocn : 49|2@0+ (1,0) [0|3] ""  WBS
+ SG_ CAN2Cntr212 : 53|4@0+ (1,0) [0|15] ""  WBS
+
+BO_ 535 CAN2_VIU_APU_0x217: 8 VIU
+ SG_ Apu2StrtReq : 7|1@0+ (1,0) [0|1] ""  APU
+ SG_ Apu2DisChrgReq : 3|1@0+ (1,0) [0|1] ""  APU
+ SG_ Apu2PwrReq : 18|11@0+ (0.1,-150) [-150|50] "kW"  APU
+ SG_ CAN2Cntr217 : 59|4@0+ (1,0) [0|15] ""  APU
+
+BO_ 775 CAN2_VIU_MCU_0x307: 8 VIU
+ SG_ VCU2gearposition : 22|3@0+ (1,0) [0|7] ""  MCU
+
+BO_ 1312 CAN2_VIU_MCU_0x520: 8 VIU
+ SG_ VCU2InAccpedalposition1 : 7|8@0+ (0.4,0) [0|100] "%"  MCU
+ SG_ VCU2InAccpedalposition2 : 15|8@0+ (0.4,0) [0|100] "%"  MCU
+ SG_ Test2AccrPedV1 : 23|8@0+ (0.02,0) [0|5] "V"  MCU
+ SG_ Test2AccrPedV2 : 31|8@0+ (0.02,0) [0|5] "V"  MCU
+
+BO_ 1313 CAN2_VIU_MCU_0x521: 8 VIU
+ SG_ Test2FlgGripBrk : 35|1@0+ (1,0) [0|1] ""  MCU
+ SG_ Test2FlgBrk : 43|1@0+ (1,0) [0|1] ""  MCU
+ SG_ CAN2BMSMaiRlyClsd : 45|1@0+ (1,0) [0|1] ""  MCU
+ SG_ CAN2BMSNegRlyClsd : 56|1@0+ (1,0) [0|1] ""  MCU
+
+BO_ 257 CAN2_VIU1_VIU_0x101: 8 VIU1
+ SG_ PtWhlLocnR : 12|2@0+ (1,0) [0|3] ""  VIU
+ SG_ PtWhlCompanionBattAvlR : 57|1@0+ (1,0) [0|1] ""  VIU
+ SG_ PtWhlTypR : 49|2@0+ (1,0) [0|3] ""  VIU
+ SG_ VcuHvActvR : 14|1@0+ (1,0) [0|1] ""  VIU
+ SG_ VcuLvActvR : 15|1@0+ (1,0) [0|1] ""  VIU
+ SG_ VcuPwrSysStsNrR : 31|8@0+ (1,0) [0|1] ""  VIU
+ SG_ VCUApuPwrReqR : 10|11@0+ (0.1,-150) [-150|50] "kW"  VIU
+ SG_ VCUFuQntyR : 7|8@0+ (1,0) [0|100] "%"  VIU
+ SG_ VcuBcuFltRankR : 36|3@0+ (1,0) [0|4] ""  VIU
+ SG_ BcuCanStR : 38|1@0+ (1,0) [0|1] ""  VIU
+ SG_ VcuBcuSocR : 33|10@0+ (0.1,0) [0|100] "%"  VIU
+ SG_ EpbCtrlStsFbR : 53|4@0+ (1,0) [0|15] ""  VIU
+ SG_ VcuBcuPwrUpAllwR : 55|1@0+ (1,0) [0|1] ""  VIU
+ SG_ VcuBcuChrgModR : 56|1@0+ (1,0) [0|1] ""  VIU
+ SG_ VcuBcuChrgStsR : 59|2@0+ (1,0) [0|3] ""  VIU
+ SG_ VcuBcupauseChargeFaultR : 62|3@0+ (1,0) [0|7] ""  VIU
+ SG_ ErrChrgInhbReqR : 13|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ErrLvUpInhbR : 37|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ErrLvPwrDwnReqR : 39|1@0+ (1,0) [0|1] ""  VIU
+
+BO_ 513 CAN2_WBS_VIU_0x201: 8 WBS
+ SG_ StatusWBS2 : 3|2@0+ (1,0) [0|3] ""  VIU
+ SG_ WBS2EPBRequest1 : 4|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2RunParkStatus1 : 7|2@0+ (1,0) [0|3] ""  VIU
+ SG_ Wbs2PressureFeedback1 : 1|10@0+ (0.0238,0) [0|10] "Mpa"  VIU
+ SG_ WBS2FaultLevel : 20|3@0+ (1,0) [0|7] ""  VIU
+ SG_ WBS2ParkPressFeedback1 : 23|3@0+ (1,0) [0|7] "mPa"  VIU
+ SG_ WBS2BrkCmdAbnormal1 : 32|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2PTrackAbnormal1 : 33|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2PShake1 : 34|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2TSnsrFault1 : 35|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2TSnsrFault2 : 36|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2PSnsrFault2 : 37|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2ECUTHigh2 : 38|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2VLow2 : 39|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2VHigh2 : 40|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2PTrackAbnormal2 : 41|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2PShake2 : 42|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2Mismatch2 : 43|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2CANTimeout3 : 44|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2OverCurrent4 : 45|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2ISnsrAbnormal4 : 46|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2VLow4 : 47|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2BR : 51|4@0+ (1,0) [0|15] ""  VIU
+ SG_ WBS2VHigh4 : 52|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2PSwFault4 : 53|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2PreDriverFault4 : 54|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WBS2MotorPosnSnsrFault4 : 55|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Cntr201 : 63|8@0+ (1,0) [0|15] ""  VIU
+
+BO_ 514 CAN2_WBS_VIU_0x202: 8 WBS
+ SG_ WBS2Battu : 7|16@0+ (0.25,0) [0|16353.8] "V"  VIU
+ SG_ WBS2BattI : 23|16@0- (0.0039063,0) [-128|127.996] "A"  VIU
+ SG_ WBS2RackPosn : 39|16@0+ (1,0) [0|65535] "um"  VIU
+ SG_ WBS2TqTar : 55|16@0- (0.0039063,0) [-128|127.996] "Nm"  VIU
+
+BO_ 1792 CAN2_VIU_VIU_0x700: 8 VIU
+ SG_ VcuFanRlyEna : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuMcuCoolPumpRlyEna : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuBcuCoolPumpRlyEna : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuFrntLampRlyEna : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuMdcRadarRlyEna : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuWbsRlyEna : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuTensnrRlyEna : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuIsgRlyEna : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuPosnLampSts : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuHornRlyEna : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuDcdcRlyEna : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuTurnLampSts : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuRvsLiLampSts : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuBrkPedlLiLampSts : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuAcpRlyEna : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuResElyEna1 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuFanSpdPwmCtrl : 23|8@0+ (1,0) [0|100] "pr" Vector__XXX
+ SG_ VcuEPBCtrl : 39|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VcuPrechrgRlyEna : 26|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuPosRlyEna : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuLeRiPosRlyEna : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuCANStStopReq : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuApuCAN1StStopReq : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuApuCAN2StStopReq : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuDataStoreReq : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuTotVygStorg : 47|16@0+ (1,0) [0|65535] "km" Vector__XXX
+ SG_ VcuResiFuQntyStorg : 63|8@0+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 1793 CAN2_VIU_VIU_0x701: 8 VIU
+ SG_ MotSnsrTVcu : 7|16@0+ (1,0) [0|65535] "O" Vector__XXX
+ SG_ BattSnsrTVcu : 23|16@0+ (1,0) [0|65535] "O" Vector__XXX
+ SG_ FuQntyVcu : 39|16@0+ (1,0) [0|500] "O" Vector__XXX
+ SG_ LoBattUVcu : 55|16@0+ (1,0) [0|65535] "mV" Vector__XXX
+
+BO_ 1795 CAN2_VIU_VIU_0x703: 8 VIU
+ SG_ MotSnsrTOutVcu : 7|16@0+ (0.01,0) [0|200] "℃" Vector__XXX
+ SG_ BatttSnsrTOutVcu : 23|16@0+ (0.01,0) [0|200] "℃" Vector__XXX
+
+BO_ 1794 CAN2_VIU_VIU_0x702: 8 VIU
+ SG_ EmgyStopVcu : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MechanismKeyFlgVcu : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HvilErrVcu : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LeOrRiPosRcndVcu : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2VIUId101CanStsVcu : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN1ApuId310CanStsVcu : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2ApuId310CanStsVcu : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN1BcuId181CanStsVcu : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2BcuId181CanStsVcu : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ComId421CanStsVcu : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN1DCLId601CanStsVcu : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2DCLId601CanStsVcu : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN1DCHId603CanStsVcu : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2DCHId603CanStsVcu : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ImuId500CanStsVcu : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN1McuId153CanStsVcu : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2McuId153CanStsVcu : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MdcId148CanStsVcu : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TboxId501CanStsVcu : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN1WbsId201CanStsVcu : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2WbsId201CanStsVcu : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN1Acp352CanStsVcu : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2Acp353CanStsVcu : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN2Acp354CanStsVcu : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuPwrSysStsNr : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuBattSwtSt : 39|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuWhlCmbnMod : 47|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuApu1PtMod : 51|4@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VcuApu2PtMod : 55|4@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EpbCtrlStsInfo : 59|4@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1808 CAN2_VIU_VIU_0x710: 8 VIU
+ SG_ SwVersVFN : 7|8@0+ (1,0) [1|255] "" Vector__XXX
+ SG_ SwVersVRN : 15|8@0+ (1,0) [1|9] "" Vector__XXX
+ SG_ SwVersVSN : 23|8@0+ (1,0) [0|9] "" Vector__XXX
+ SG_ SwVersCVN : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ SwVersDVN : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 851 CAN2_TMS_VIU_0x353: 8 TMS
+ SG_ Compressor2Voltage : 7|16@0+ (1,0) [0|1000] "V"  VIU
+ SG_ Compressor2Current : 23|8@0+ (0.1,0) [0|25.5] "A"  VIU
+ SG_ Compressor2speedset : 31|16@0+ (1,0) [0|6000] "rpm"  VIU
+ SG_ Compressor2state : 43|4@0+ (1,0) [0|15] ""  VIU
+ SG_ Compressor2Fault1 : 44|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault2 : 45|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault3 : 46|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault4 : 47|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault5 : 48|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault6 : 49|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault7 : 50|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault8 : 51|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault9 : 52|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault10 : 53|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2Fault11 : 54|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Compressor2CurrentRMS : 63|8@0+ (0.1,0) [0|25.5] "A"  VIU
+
+BO_ 852 CAN2_TMS_VIU_0x354: 8 TMS
+ SG_ Compressor2temp : 7|8@0+ (1,0) [0|255] "℃"  VIU
+ SG_ Compressor2NoCanTime : 15|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Compressor2Power : 23|16@0+ (0.1,0) [0|6553.5] "Kw"  VIU
+ SG_ Compressor2CurrentRMS1 : 39|16@0+ (1,0) [0|65535] "A"  VIU
+ SG_ Compressor2enable : 55|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Compressor2OverCurrentCount : 63|8@0+ (1,0) [0|255] ""  VIU
+
+BO_ 850 CAN2_TMS_VIU_0x352: 8 TMS
+ SG_ Compressor2Cmd : 7|8@0+ (1,0) [0|255] ""  VIU
+ SG_ Compressors2peedse : 15|16@0+ (1,0) [0|65535] "rpm"  VIU
+ SG_ BatCoolInTemp2 : 31|8@0+ (1,-40) [-40|200] "℃"  VIU
+ SG_ Compressor2DischargePressure : 47|8@0+ (0.1,0) [0|25.5] "bar"  VIU
+ SG_ Compressor2DischargeTemp : 55|8@0+ (1,0) [0|255] "℃"  VIU
+
+
+
+CM_ SG_ 784 Apu2EngSts "发动机工作状态 
+0:等待
+1:启动中
+2:启动成功
+3:运启动故障
+4:停机";
+CM_ SG_ 784 Apu2ActvEngTorque "飞轮端发动机真实扭矩";
+CM_ SG_ 784 Apu2EngCtrlModSts "发动机控制模式 
+0:无控制
+1:控转速模式
+2:控扭矩模式
+3:限速限扭模式";
+CM_ SG_ 784 Apu2EngSpdActv "发动机转速";
+CM_ SG_ 784 Apu2EngOilPressure "发动机轨压";
+CM_ SG_ 784 EngpctLoad2 "发动机当前负载率";
+CM_ SG_ 784 Ecu2FltRnks "发动机故障等级";
+CM_ SG_ 784 Ecu2ErrNo "发动机相关故障代码";
+CM_ SG_ 785 Apu2IsgMod "发电机状态 
+0:初始化
+1:低压上电正常
+2:预留
+3:电机允许运行
+4:电机转速闭环运行
+5:电机转矩闭环运行
+6:下强电（主动放电）
+7:下弱电（高压低于 36V）
+8:错误（故障保护）
+9: 拖车模式
+10:智能下线模式下的准备状态
+11: 智能下线模式下的测试状态";
+CM_ SG_ 785 Apu2FltRnk "APU故障等级 
+0:无故障
+1:一级故障
+2:二级故障
+3:三级故障";
+CM_ SG_ 785 Apu2PwrOutp "Apu实际输出功率";
+CM_ SG_ 785 Apu2Spd "ISG转速";
+CM_ SG_ 785 Apu2CtrlMod "APU控制模式状态 
+0:Standy
+1:Strt
+2:Idle
+3:Stop
+4:PwrCtrl
+5:SpdPwrCtrl";
+CM_ SG_ 785 Apu2LimtSpd "ISG限制转速";
+CM_ SG_ 785 Apu2ErrNr "APU故障码";
+CM_ SG_ 785 Apu2ErrTot "APU故障数";
+CM_ SG_ 788 ISG2ElecMotRealTq "ISG电机真实扭矩";
+CM_ SG_ 788 ISG2MaxAvlTq "ISG最大可用扭矩";
+CM_ SG_ 788 ISG2MinAvlTq "ISG最小可用扭矩";
+CM_ SG_ 786 Apu2MotT "电机温度";
+CM_ SG_ 786 Apu2McuT "控制器温度";
+CM_ SG_ 786 Apu2ACI "ISG交流电流";
+CM_ SG_ 786 Apu2DCI "ISG直流电流";
+CM_ SG_ 786 Apu2DCU "ISG直流电压";
+CM_ SG_ 786 Apu2PwrMaxAllw "APU最大允许输出功率";
+CM_ SG_ 787 Apu2ISGPhaCurrHiFault "故障码";
+CM_ SG_ 787 Apu2ISGMotSpdHiFault "故障码";
+CM_ SG_ 787 Apu2ISGDcLinkVoltHiFault "故障码";
+CM_ SG_ 787 Apu2ISGDcLinkVoltLoFault "故障码";
+CM_ SG_ 787 Apu2ISGMotBlockFault "故障码";
+CM_ SG_ 787 Apu2ISGMcuTempHiFault "故障码";
+CM_ SG_ 787 Apu2ISGMotTempHiFault "故障码";
+CM_ SG_ 787 Apu2ISGHwFault "故障码";
+CM_ SG_ 787 Apu2ISGCmuFault "故障码";
+CM_ SG_ 787 Apu2ISGEStopActv "故障码";
+CM_ SG_ 787 Apu2ISGErrNr "故障码";
+CM_ SG_ 787 Apu2ISGErrTot "故障数量";
+CM_ SG_ 787 Apu2ISGFltRank "发电机故障等级";
+CM_ SG_ 787 Apu2TqReq "需求扭矩";
+CM_ SG_ 787 Apu2SpdReq "发动机转速请求";
+CM_ SG_ 1601 Apu2IntakeAirTemp "进气温度T1";
+CM_ SG_ 1601 Apu2EngCoolgT "发动机冷却液温度";
+CM_ SG_ 1601 Apu2POWERBattU "EMS供电电压";
+CM_ SG_ 1601 Apu2AmbientAirPressure "大气压力";
+CM_ SG_ 1601 Apu2MaxTorqueAvl "发动机当前允许使用最大扭矩";
+CM_ SG_ 1601 Apu2EngFuelCons "发动机的100ms油耗";
+CM_ SG_ 1601 Apu2EngLubeOilP "发动机机油压力";
+CM_ SG_ 385 BCU2MaxDischrgPwrContns "最大持续允许放电功率";
+CM_ SG_ 385 BCU2EgyFbAllwdchrgPwrContns "最大持续允许充电功率";
+CM_ SG_ 385 BCU2MaxDischrgCur "最大允许持续放电电流";
+CM_ SG_ 385 BCU2EgyFbAllwdchrgCur "最大允许持续充电电流";
+CM_ SG_ 385 BCU2MinDischrgVol "最小允许放电电压";
+CM_ SG_ 385 BCU2EgyFbAllwdchrgVol "最大允许充电电压";
+CM_ SG_ 385 BCU2HeatErr "电池加热膜失控故障 
+0:无故障
+1:有故障";
+CM_ SG_ 385 BCU2CycCntr181 "cycle_counter计数";
+CM_ SG_ 386 BCU2DcContUSig "直流充电连接确认电压信号";
+CM_ SG_ 386 BCU2manufacturerInfo "厂家编号";
+CM_ SG_ 386 BCU2pauseChargeFault "充电终止原因 
+0:无故障
+2:充电桩要求停止充电
+3:BMS充电通信类故障
+4:整车要求停止充电
+6:CC2/CC断开连接停止充电";
+CM_ SG_ 386 BCU2Insulated "绝缘电阻";
+CM_ SG_ 386 Batt2PwrChrgPeakval10Sec "10S短时峰值充电功率";
+CM_ SG_ 386 Batt2PwrDchrgPeakval10Sec "10S短时峰值放电功率";
+CM_ SG_ 386 BCU2ErrCode "高压电池故障码";
+CM_ SG_ 386 BCU2DCDCBackVol "主正继电器后端电压";
+CM_ SG_ 386 BCU2NegRlyClsd "主负继电器状态 
+0:Open
+1:Close";
+CM_ SG_ 387 BCU2BattVol "动力电池总电压";
+CM_ SG_ 387 BCU2BattCur "动力电池总电流";
+CM_ SG_ 387 BCU2EquiliBrtnNowSt "电池均衡状态 
+0:NO
+1: YES";
+CM_ SG_ 387 BCU2PreRlyClsd "预充电继电器吸合 
+0: OFF
+1: ON";
+CM_ SG_ 387 BCU2MaiRlyClsd "主继电器吸合 
+0: OFF
+1: ON";
+CM_ SG_ 387 BCU2FaultLevel "BCU故障等级 
+0:no errors
+1:一级故障
+2:二级故障
+3:三级故障
+4:四级故障";
+CM_ SG_ 387 BCU2BattSOC "动力电池SOC";
+CM_ SG_ 387 BCU2CycCntr183 "cycle_counter计数";
+CM_ SG_ 387 BCU2OperMod "Bcu工作模式 
+0:Initializing
+1:Standby
+2:PreCharge
+3:HVActive
+4:Powerdown
+5:Ready to Sleep
+15: Failure";
+CM_ SG_ 387 BCU2PwrUpAllw "Bcu允许上高压 
+0:Not Allow
+1:Allow";
+CM_ SG_ 387 BCU2ChrgMod "Bcu充电模式 
+0:No Charge
+1:DC Mode";
+CM_ SG_ 387 BCU2ChrgSts "Bcu充电状态 
+0:No Charge
+1:Charging
+2:Charge Full
+3:Charge End";
+CM_ SG_ 387 BCU2DChrgRlyClsd "直流充电继电器闭合状态 
+0:Open
+1:Close";
+CM_ SG_ 387 BCU2CoolgReq "电池冷却 
+0:无需求
+1:有冷却需求";
+CM_ SG_ 1297 BCU2MaxBattTemp "电池模块最高温度值";
+CM_ SG_ 1297 BCU2MinBattTemp "电池模块最低温度值";
+CM_ SG_ 1297 BCU2MaxTempModNum "电池最高温度模块对应编号";
+CM_ SG_ 1297 BCU2MinTempModNum "电池最低温度模块对应编号";
+CM_ SG_ 1297 BCU2AvrgBattTemp "电池平均温度";
+CM_ SG_ 1297 BCU2PermMaxBattTemp "允许电池模块最高温度值";
+CM_ SG_ 1297 BCU2PermMinBattTemp "允许电池模块最低温度值";
+CM_ SG_ 1297 BCU2SOH "电池寿命";
+CM_ SG_ 1617 BCU2MaxCellVol "最大单体电压";
+CM_ SG_ 1617 BCU2MinCellVol "最小单体电压";
+CM_ SG_ 1617 BCU2MaxCellVolNum "最大电压单体对应编号";
+CM_ SG_ 1617 BCU2MinCellVolNum "最小电压单体对应编号";
+CM_ SG_ 1617 BCU2SOCMax "SOC上限";
+CM_ SG_ 1617 BCU2SOCMin "SOC下限";
+CM_ SG_ 1618 BCU2CellDeltaVolRank2 "单体电压压差过高二级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2CellDeltaVolRank1 "单体电压压差过高一级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2CellUnderVolRank3 "单体电压过低3级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2CellUnderVolRank2 "单体电压过低2级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2CellUnderVolRank1 "单体电压过低1级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2CellOverVolRank3 "单体电压过高3级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2CellOverVolRank2 "单体电压过高2级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2CellOverVolRank1 "单体电压过高1级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverCurtChrgRank3 "持续充电电流过高三级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverCurtChrgRank2 "持续充电电流过高二级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverCurtChrgRank1 "持续充电电流过高一级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2PrechrgFailErr "预充电失败故障(超时) 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2DCRlyPAdhErr "快充正极继电器粘连 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2MaiRlyPAdhErr "正极继电器粘连 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2MaiRlyNAdhErr "负极继电器粘连 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2CC2Err "CC2检测错误 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverPeakCurtDischrgRank2 "峰值放电电流过高二级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverPeakCurtDischrgRank1 "峰值放电电流过高一级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverCurtDischrgRank3 "持续放电电流过高三级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverCurtDischrgRank2 "持续放电电流过高二级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverCurtDischrgRank1 "持续放电电流过高一级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverPeakCurtChrgRank3 "峰值充电电流过高三级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverPeakCurtChrgRank2 "峰值充电电流过高二级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverPeakCurtChrgRank1 "峰值充电电流过高一级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattUnderTempRank2 "温度过低2级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattOverTempRank4 "温度过高4级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattOverTempRank3 "温度过高3级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattOverTempRank2 "温度过高2级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2ChrgErr "充电故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattSOHLo "SOC过低故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2TotVolRatiErr "总电压合理性故障:电压采集与电芯累加和差异大 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2OverPeakCurtDischrgRank3 "峰值放电电流过高三级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattOverURank2 "总电压过高2级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattOverVolRank1 "总电压过高1级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2InsuFlt4 "绝缘故障4级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2InsuFlt2 "绝缘故障2级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2HVILErr "高压互锁故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2DeltaTempRank3 "温差过大 3级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2DeltaTempRank2 "温差过大 2级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattUnderTempRank3 "温度过低3级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2SOCHopErr "SOC跳变故障报警 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2SOCcalcErr "SOC估算错误 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattOverPwr "超功率故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2DCchrgInsuFlt "充电绝缘故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattUnderVolRank3 "总电压过低三级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattUnderVolRank2 "总电压过低二级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattUnderURank1 "总电压过低一级故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BattOverURank3 "总电压过高3级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2TotVolSnsrElecErr "电压传感器检测故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2SlaveCALFAULT "从板标定超出范围故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2InlrCANErr "BCU内网 CAN通讯故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2ChrgCANErr "BCU充电 CAN通讯故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2VehCANErr "BCU整车 CAN通讯故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2BlcErr "均衡故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2ChargerOverTemp3 "充电座过温报警3级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2ChargerOverTemp2 "充电座过温报警2级 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2DCchrgTemErr "DC充电插座温度检测故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2EEpErr "EEPROM 数据错误 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2WatchDogErr "看门狗相关故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2ROMCheckErr "ROM故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2RAMCheckErr "RAM故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2TempSnsrElecErr "温度传感器故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1618 BCU2TotCurtSnsrElecErr "总电流传感器电气故障 
+0:无故障
+1:有故障";
+CM_ SG_ 1619 BCU2SoftVerx "软件版本_主版本号";
+CM_ SG_ 1619 BCU2SoftVeryy "软件版本_次版本号";
+CM_ SG_ 1619 BCU2SoftVerzz "软件版本_修订号";
+CM_ SG_ 1619 BCU2SoftVeryear "软件版本_年";
+CM_ SG_ 1619 BCU2SoftVermonth "软件版本_月";
+CM_ SG_ 1619 BCU2SoftVerday "软件版本_日";
+CM_ SG_ 1619 BCU2TotalCapacity "总容量";
+CM_ SG_ 1539 Dch2Mode "DCDC工作模式24V 
+0x0:停止
+0x1:运行中
+0x2:故障
+其他值：预留";
+CM_ SG_ 1539 Dch2OutputVol "DCDC输出电压24V";
+CM_ SG_ 1539 Dch2OutputCur "DCDC输出电流24V";
+CM_ SG_ 1539 Dch2FaultInfo "故障位24V 
+位描述：
+0:输入欠压
+1:输入过压
+2:输入过流
+3:输出欠压
+4:输出过压
+5:输出过流
+6:模块过温
+7:降功率运行
+8:通讯故障
+9:预留
+10:预留
+11:预留
+12:预留
+13:预留
+14:预留
+15:预留";
+CM_ SG_ 1539 CAN2Cntr603 "心跳信号603";
+CM_ SG_ 1540 Dch2InputVol "DCDC输入电压24V";
+CM_ SG_ 1540 Dch2MaxInterTemp "DCDC内部最高温度24V";
+CM_ SG_ 1540 Dch2InputCur "DCDC输入电流24V";
+CM_ SG_ 1540 Dch2EnableKL15 "DCDC使能（KL15）24V 
+0x0:有效
+0x1:无效";
+CM_ SG_ 1540 Dch2Version "DCDC版本24V";
+CM_ SG_ 1540 Dch2Live "Live24V";
+CM_ SG_ 1540 CAN2Cntr604 "心跳信号604";
+CM_ SG_ 1537 Dcl2Mode "DCDC工作模式12V 
+0x0:停止
+0x1:运行中
+0x2:故障
+0x3：预留";
+CM_ SG_ 1537 Dcl2OutputVol "DCDC输出电压12V";
+CM_ SG_ 1537 Dcl2OutputCur "DCDC输出电流12V";
+CM_ SG_ 1537 Dcl2FaultInfo "故障位12V 
+位描述：
+0:输入欠压
+1:输入过压
+2:输入过流
+3:输出欠压
+4:输出过压
+5:输出过流
+6:模块过温
+7:降功率运行
+8:通讯故障
+9:预留
+10:预留
+11:预留
+12:预留
+13:预留
+14:预留
+15:预留";
+CM_ SG_ 1537 CAN2Cntr601 "心跳信号601";
+CM_ SG_ 1538 Dcl2InputVol "DCDC输入电压12V";
+CM_ SG_ 1538 Dcl2MaxInterTemp "DCDC内部最高温度12V";
+CM_ SG_ 1538 Dcl2InputCur "DCDC输入电流12V";
+CM_ SG_ 1538 Dcl2EnableKL15 "DCDC使能（KL15）12V 
+0x0:有效
+0x1:无效";
+CM_ SG_ 1538 Dcl2Version "DCDC版本12V";
+CM_ SG_ 1538 Dcl2Live "Live12V";
+CM_ SG_ 1538 CAN2Cntr602 "心跳信号602";
+CM_ SG_ 339 IPU2ElecMotSpd "电机转速";
+CM_ SG_ 339 IPU2ElecMotRealTq "电机真实扭矩";
+CM_ SG_ 339 IPU2FactoryMssge "IPU供应商信息 
+0x0=曲阜天科;0x1=越博;0x2=依思普林;0x3=汇川";
+CM_ SG_ 339 IPU2DischrgSts "电机控制器放电状态 
+0x0: 放电未完成;0x1: 放电完成;0x2~0xF:预留信号";
+CM_ SG_ 339 Inv2FltRank "IPU故障等级验证 
+Note:IPU inv fault rank＋IPU_fault_rank=3   IPUFltRank + InvFltRank两者相加等于三";
+CM_ SG_ 339 IPU2FltRank "IPU故障等级 
+00:No errors；
+01:warning but still working
+10:alarm, get into safe mode;
+11: stop.  所报故障最高级别，有三级发三，同时有1  2级故障时发二。";
+CM_ SG_ 339 IPU2OpenIGBTSts "电机控制器开关管状态 
+0x0: Close;0x1: Open;0x2~0xF:预留信号";
+CM_ SG_ 339 IPU2ID153CycCntr "cycle counter计数";
+CM_ SG_ 339 IPU2RdyForOper "IPU准备进入operation模式 
+0x0: No  0x1: Yes";
+CM_ SG_ 339 IPU2RdyToShtDwn "IPU准备shutdown 
+0x0: No  0x1: Yes";
+CM_ SG_ 339 IPU2RdyToPrechrg "允许预充电 
+0x0: No  0x1: Yes";
+CM_ SG_ 339 IPU2StrtRels "IPU初始化完成 
+0x0: No  0x1: Yes";
+CM_ SG_ 339 IPU2MaxAvlTq "最大可用扭矩";
+CM_ SG_ 339 IPU2MinAvlTq "最小可用扭矩";
+CM_ SG_ 371 MCU2DcU "MCU电压";
+CM_ SG_ 371 MCU2DcCrrt "MCU电流";
+CM_ SG_ 371 MCU2PhaACrrt "A相电流";
+CM_ SG_ 371 MCU2PhaBCrrt "B相电流";
+CM_ SG_ 371 MCU2ElecMotEff "电机效率";
+CM_ SG_ 547 MCU2ElecMotT "电机温度";
+CM_ SG_ 547 MCU2IGBTT "逆变器温度";
+CM_ SG_ 547 MotorNo "电机数量";
+CM_ SG_ 547 MCU2T "MCU温度";
+CM_ SG_ 547 MCU2SwVers "软件版本号 
+版本号用日期来表示，例如60219表示为2016年2月19日";
+CM_ SG_ 547 IPU2ErrNum "故障代码";
+CM_ SG_ 547 IPU2ErrAmnt "故障数量";
+CM_ SG_ 547 MCU2MotSts "电机状态 
+0x0:Reserved
+0x1:耗电
+0x2:发电
+0x3:关闭状态
+0x4:准备状态";
+CM_ SG_ 1155 CurrentLimitErr2 "逐波限流故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2IGBTOverTL "IGBT一般过温（模块过温预警） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2IGBTOverTH "IGBT严重过温（模块过温故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotOverTL "电机一般过温（电机过温预警） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotOverTH "电机严重过温（电机过温故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2PwrOutpModFlt "功率模块输出故障（硬件驱动故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2HardwareOverCurrent "电机硬件过流（硬件过流故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotOverSpd "电机超速（电机超速故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2HiUUnderUL "高压一般欠压 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2HiUOverUL "高压一般过压 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2CANComErr "CAN通讯错误（CAN离线故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2DischrgErr "快放电错误（主动放电故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2SoftwareOverCurrent "电机软件过流（软件过流故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotReslvErr "电机旋变错误（旋变故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotThreePhaBreakErr "电机三相线缺相 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2HiUUnderUH "高压严重欠压（母线欠压故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2HiUOverUH "高压严重过压（母线过压故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2LowBatErr "低电平欠压（低压欠压故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTDATASELF "数据自检故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTUUPIGBT "U相上桥IGBT故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTUDOWNIGBT "U相下桥IGBT故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTVUPIGBT "V相上桥IGBT故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTVDOWNIGBT "V相下桥IGBT故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2HardwareOverU "MCU硬件过压故障（硬件母线过压故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTWUPIGBT "W相上桥IGBT故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTWDOWNIGBT "W相下桥IGBT故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2LowBatWarning "低压电源欠压预警 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotOverSpdWarning "电机超速预警 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2IGBTTSnsrShoCircGnd "IGBT温度传感器短路接地 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2IGBTTSnsrShoCircVcc "IGBT温度传感器短路接电源 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2OverLoadErr "控制器过载故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2OverLoadWraning "控制器过载预警 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotTSnsrShoCircGnd "电机温度传感器短路接地（电机温度传感器短路故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotStopTurnErr "电机堵转（堵转预警） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2ElecMotTSnsrOpenCirc "电机温度传感器开路（电机温度传感器断线故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTHUOC "U相硬件过流 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTHVOC "V相硬件过流 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FAULTHWOC "W相硬件过流 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2CurrentDetectErr "电路检测故障（交流霍尔自检故障） 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2TempErr "控制器水温温差故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2rDriverUV "EEPROM校验故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2PhaseShortCircuit "零位差异过大故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2FastUV "驱动芯片欠压 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2alarmOTNTC "相间短路 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2OTNTC "快速欠压 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2alarmOperateOrder "控制器过温预警 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 EEPROMErr2 "控制器过温故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 AngleDiffErr2 "操作顺序保护故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2alarmHighSpeedStop "高速停机保护故障";
+CM_ SG_ 1155 MCU2alarmHighSpeedDir "高速误挂挡保护故障";
+CM_ SG_ 1155 MCU2alarmHighTorqueStop "大扭矩停机保护 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 MCU2Dev "速度偏差过大故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 errorCanBSend2 "CAN2发送超时故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 errorCanBReceive2 "CAN2接收超时故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 InterlockErr2 "高压互锁故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1155 PTCAdhesion2 "PTC继电器粘连故障 
+0x0：No error；0x1：error";
+CM_ SG_ 1156 MCU2ErrAmnt "故障数量";
+CM_ SG_ 1156 MCU2ErrNum1 "故障代码1";
+CM_ SG_ 1156 MCU2ErrNum2 "故障代码2";
+CM_ SG_ 1156 MCU2ErrNum3 "故障代码3";
+CM_ SG_ 1156 MCU2ErrNum4 "故障代码4";
+CM_ SG_ 1156 MCU2ErrNum5 "故障代码5";
+CM_ SG_ 1156 MCU2ErrNum6 "故障代码6";
+CM_ SG_ 1156 MCU2ErrNum7 "故障代码7";
+CM_ SG_ 289 VCU2ElecMotOperMod "电机工作模式 
+0x0:No Operation；
+0x1:Torque Mode
+0x2:Speed Mode;
+0x3:Reserved";
+CM_ SG_ 289 VCU2SysFltRank "系统故障等级 
+0x0:No errors；
+0x1:warning
+0x2restricted operation;;
+0x3:emergency stop";
+CM_ SG_ 289 VCU2StrtAllwd "允许MCU开始工作标志位 
+0=Invalid; 1=valid";
+CM_ SG_ 289 VCU2MCUSpdDischrg "允许MCU激活快速放电标志位 
+0=Invalid; 1=valid";
+CM_ SG_ 289 VCU2PtWhlLocn "动力轮位置 
+0:无效
+1:左
+2:右";
+CM_ SG_ 289 VCU2MCUPwrDwn "整车将进入power_down状态标志位 
+0=Invalid; 1=valid";
+CM_ SG_ 289 VCU2ReqTq "扭矩请求";
+CM_ SG_ 289 VCU2ReqSpd "速度请求";
+CM_ SG_ 289 VCU2MaxPermTq "最大允许扭矩";
+CM_ SG_ 289 VCU2MinPermTq "最小允许扭矩";
+CM_ SG_ 289 VCU2PrecClsInfo "预充电继电器状态 
+0x0 : precharge relay is open
+0x1 : precharge relay is closed";
+CM_ SG_ 289 VCU2MaiRlyClsInfo "主继电器状态 
+0x0 : main relay is open
+0x1 : main relay is closed";
+CM_ SG_ 289 CAN2VCUID131CycCntr "对扭矩信号进行计数";
+CM_ SG_ 530 Prak2PressureLevel "驻车压力指令";
+CM_ SG_ 530 RunningParking2Status "行驻车指令 
+0:驻车
+1:行车
+2:预留
+3:预留";
+CM_ SG_ 530 ESTOP2 "紧急制动 
+0:正常
+1:制动
+2:无效
+3:无效";
+CM_ SG_ 530 ONIGNReady "上电/开/就绪";
+CM_ SG_ 530 PressureTargetWBS2 "WBS2压力指令";
+CM_ SG_ 530 Pressure2TargetWBS1 "WBS1压力指令";
+CM_ SG_ 530 VCU2VehicleSpeed "车速";
+CM_ SG_ 530 vcuwbs02BR2 "滚动计数器";
+CM_ SG_ 530 VcuWbs2PtWhlLocn "动力轮安装位置 
+0:无效
+1:左
+2:右";
+CM_ SG_ 530 CAN2Cntr212 "校验值";
+CM_ SG_ 535 Apu2StrtReq "发动机起动 
+0:停机
+1:起动";
+CM_ SG_ 535 Apu2DisChrgReq "ISG快放请求";
+CM_ SG_ 535 Apu2PwrReq "功率请求";
+CM_ SG_ 535 CAN2Cntr217 "心跳信号217";
+CM_ SG_ 775 VCU2gearposition "档位信号 
+0x0：N  
+0x1：D   
+0x2：R   
+0x3：E  
+0x7：Reserve";
+CM_ SG_ 1312 VCU2InAccpedalposition1 "加速踏板信号1";
+CM_ SG_ 1312 VCU2InAccpedalposition2 "加速踏板信号2";
+CM_ SG_ 1312 Test2AccrPedV1 "油门踏板电压值1";
+CM_ SG_ 1312 Test2AccrPedV2 "油门踏板电压值2";
+CM_ SG_ 1313 Test2FlgGripBrk "手刹信号";
+CM_ SG_ 1313 Test2FlgBrk "制动踏板被踩下信号";
+CM_ SG_ 1313 CAN2BMSMaiRlyClsd "主继电器吸合";
+CM_ SG_ 1313 CAN2BMSNegRlyClsd "主负继电器吸合";
+CM_ SG_ 257 PtWhlLocnR "动力轮安装位置 
+0:无效
+1:左
+2:右";
+CM_ SG_ 257 PtWhlCompanionBattAvlR "动力电池可用状态 
+0:不可用
+1:可用";
+CM_ SG_ 257 PtWhlTypR "动力轮类型 
+0:无效
+1:纯电
+2:混动";
+CM_ SG_ 257 VcuHvActvR "整车高压激活状态 
+0:失败
+1:成功";
+CM_ SG_ 257 VcuLvActvR "整车低压激活状态 
+0:失败
+1:成功";
+CM_ SG_ 257 VcuPwrSysStsNrR "上下电状态机";
+CM_ SG_ 257 VCUApuPwrReqR "功率请求";
+CM_ SG_ 257 VCUFuQntyR "燃油量";
+CM_ SG_ 257 VcuBcuFltRankR "动力电池故障等级 
+0:无故障
+1:一级故障
+2:二级故障
+3:三级故障
+4:四级故障";
+CM_ SG_ 257 BcuCanStR "BcuCan状态 
+0:无故障
+1:故障";
+CM_ SG_ 257 VcuBcuSocR "动力电池Soc";
+CM_ SG_ 257 EpbCtrlStsFbR "EPB工作状态 
+0:初始化
+1:正在夹紧
+2:正在释放
+3.夹紧完成
+4.释放完成
+5.夹紧超时
+6.释放超时
+7.预留
+8.预留
+9.预留";
+CM_ SG_ 257 VcuBcuPwrUpAllwR "Bcu允许上高压 
+0:Not Allow
+1:Allow";
+CM_ SG_ 257 VcuBcuChrgModR "Bcu充电模式 
+0:No Charge
+1:DC Mode";
+CM_ SG_ 257 VcuBcuChrgStsR "Bcu充电状态 
+0:No Charge
+1:Charging
+2:Charge Full
+3:Charge End";
+CM_ SG_ 257 VcuBcupauseChargeFaultR "充电终止原因 
+0:无故障
+2:充电桩要求停止充电
+3:BMS充电通信类故障
+4:整车要求停止充电
+6:CC2/CC断开连接停止充电";
+CM_ SG_ 257 ErrChrgInhbReqR "禁止充电故障 
+0:无故障
+1:故障";
+CM_ SG_ 257 ErrLvUpInhbR "禁止低压上电故障 
+0:无故障
+1:故障";
+CM_ SG_ 257 ErrLvPwrDwnReqR "低压下电故障 
+0:无故障
+1:故障";
+CM_ SG_ 513 StatusWBS2 "WBS1状态 
+0:未工作
+1:正常工作";
+CM_ SG_ 513 WBS2EPBRequest1 "WBS1驻车请求 
+0:无驻车请求
+1:请求驻车";
+CM_ SG_ 513 WBS2RunParkStatus1 "行驻车状态信号 
+0:驻车
+1:行车
+2:急停状态
+3:预留";
+CM_ SG_ 513 Wbs2PressureFeedback1 "WBS液压力反馈";
+CM_ SG_ 513 WBS2FaultLevel "WBS1故障等级 
+0:无故障
+1:一级故障
+2:二级故障
+3:三级故障
+4:四级故障";
+CM_ SG_ 513 WBS2ParkPressFeedback1 "前驻车等级反馈";
+CM_ SG_ 513 WBS2BrkCmdAbnormal1 "制动指令异常(1) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2PTrackAbnormal1 "EHB液压力跟随轻微异常(1) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2PShake1 "EHB液压力轻微震荡(1) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2TSnsrFault1 "温度传感器部分故障(1) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2TSnsrFault2 "温度传感器完全故障(2) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2PSnsrFault2 "液压力传感器故障(2) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2ECUTHigh2 "控制器温度过高(2) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2VLow2 "供电电压过低异常(2) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2VHigh2 "供电电压过高异常(2) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2PTrackAbnormal2 "EHB液压力跟随严重异常(2) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2PShake2 "EHB液压力严重震荡(2) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2Mismatch2 "负载失配故障(2) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2CANTimeout3 "CAN通信故障(3) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2OverCurrent4 "EHB过流故障(4) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2ISnsrAbnormal4 "电流传感器故障(4) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2VLow4 "供电电压过低故障(4) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2BR "滚动计数器";
+CM_ SG_ 513 WBS2VHigh4 "供电电压过高故障(4) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2PSwFault4 "功率开关故障(4) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2PreDriverFault4 "预驱故障(4) 
+0:正常
+1:故障";
+CM_ SG_ 513 WBS2MotorPosnSnsrFault4 "EHB电机位置失效(4) 
+0:正常
+1:故障";
+CM_ SG_ 513 Cntr201 "心跳信号";
+CM_ SG_ 514 WBS2Battu "WBS1供电电压";
+CM_ SG_ 514 WBS2BattI "WBS1相电流";
+CM_ SG_ 514 WBS2RackPosn "WBS1主缸活塞位移";
+CM_ SG_ 514 WBS2TqTar "WBS1电机目标力矩";
+CM_ SG_ 1792 VcuFanRlyEna "风扇继电器驱动 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuMcuCoolPumpRlyEna "电机冷却水泵继电器 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuBcuCoolPumpRlyEna "电池冷却水泵继电器 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuFrntLampRlyEna "前大灯继电器驱动 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuMdcRadarRlyEna "激光雷达、毫米波雷达、红外相机继电器驱动 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuWbsRlyEna "制动唤醒继电器驱动 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuTensnrRlyEna "拉力传感器装置继电器驱动 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuIsgRlyEna "ISG唤醒继电器驱动 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuPosnLampSts "示廓灯 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuHornRlyEna "喇叭继电器驱动 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuDcdcRlyEna "DCDC继电器驱动 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuTurnLampSts "转向灯 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuRvsLiLampSts "倒车灯 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuBrkPedlLiLampSts "制动灯 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuAcpRlyEna "压缩机继电器使能 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuResElyEna1 "继电器使能预留 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuFanSpdPwmCtrl "风扇调速";
+CM_ SG_ 1792 VcuEPBCtrl "EPB电机控制 
+1:夹紧
+0:释放";
+CM_ SG_ 1792 VcuPrechrgRlyEna "预充继电器控制使能 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuPosRlyEna "主正继电器控制使能 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuLeRiPosRlyEna "二合一扩展继电器控制使能 
+0：未使能
+1：使能";
+CM_ SG_ 1792 VcuCANStStopReq "从控制器报文停发请求 
+0:发送
+1:不发送";
+CM_ SG_ 1792 VcuApuCAN1StStopReq "ApuCAN1报文停发请求 
+0:发送
+1:不发送";
+CM_ SG_ 1792 VcuApuCAN2StStopReq "ApuCAN2报文停发请求 
+0:发送
+1:不发送";
+CM_ SG_ 1792 VcuDataStoreReq "数据存储请求 
+0:无请求
+1:有请求";
+CM_ SG_ 1792 VcuTotVygStorg "总里程";
+CM_ SG_ 1792 VcuResiFuQntyStorg "剩余油量";
+CM_ SG_ 1793 MotSnsrTVcu "电机传感器采集温度值";
+CM_ SG_ 1793 BattSnsrTVcu "电池传感器采集温度值";
+CM_ SG_ 1793 FuQntyVcu "油量传感器信号";
+CM_ SG_ 1793 LoBattUVcu "低压蓄电池电压";
+CM_ SG_ 1795 MotSnsrTOutVcu "电机传感器温度";
+CM_ SG_ 1795 BatttSnsrTOutVcu "电池传感器温度";
+CM_ SG_ 1794 EmgyStopVcu "急停信号 
+0：低电平
+1：高电平";
+CM_ SG_ 1794 MechanismKeyFlgVcu "机械钥匙开关 
+0：Off
+1：On";
+CM_ SG_ 1794 HvilErrVcu "高压互锁信号 
+0：无故障
+1：有故障";
+CM_ SG_ 1794 LeOrRiPosRcndVcu "左右切换开关 
+0：左侧
+1：右侧";
+CM_ SG_ 1794 CAN2VIUId101CanStsVcu "CAN2_VIU101帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN1ApuId310CanStsVcu "CAN1_Apu310帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN2ApuId310CanStsVcu "CAN2_Apu310帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN1BcuId181CanStsVcu "CAN1_Bcu181帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN2BcuId181CanStsVcu "CAN2_Bcu181帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 ComId421CanStsVcu "Com421帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN1DCLId601CanStsVcu "CAN1_DCL601帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN2DCLId601CanStsVcu "CAN2_DCL601帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN1DCHId603CanStsVcu "CAN1_DCH603帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN2DCHId603CanStsVcu "CAN2_DCH603帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 ImuId500CanStsVcu "Imu500帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN1McuId153CanStsVcu "CAN1_Mcu153帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN2McuId153CanStsVcu "CAN2_Mcu153帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 MdcId148CanStsVcu "Mdc148帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 TboxId501CanStsVcu "Tbox501帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN1WbsId201CanStsVcu "CAN1_Wbs201帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN2WbsId201CanStsVcu "CAN2_Wbs201帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN1Acp352CanStsVcu "CAN1_Acp352帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN2Acp353CanStsVcu "CAN2_Acp353帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 CAN2Acp354CanStsVcu "CAN2_Acp354帧通讯诊断 
+0:正常
+1:长时丢帧";
+CM_ SG_ 1794 VcuPwrSysStsNr "上下电状态机";
+CM_ SG_ 1794 VcuBattSwtSt "电池切换状态机";
+CM_ SG_ 1794 VcuWhlCmbnMod "Apu状态机";
+CM_ SG_ 1794 VcuApu1PtMod "Apu1启动状态机";
+CM_ SG_ 1794 VcuApu2PtMod "Apu2启动状态机";
+CM_ SG_ 1794 EpbCtrlStsInfo "Epb状态信息 
+0:初始化
+1:正在夹紧
+2:正在释放
+3.夹紧完成
+4.释放完成
+5.夹紧超时
+6.释放超时
+7.预留
+8.预留
+9.预留";
+CM_ SG_ 1808 SwVersVFN "车型号";
+CM_ SG_ 1808 SwVersVRN "轮次号";
+CM_ SG_ 1808 SwVersVSN "配置状态号";
+CM_ SG_ 1808 SwVersCVN "软件代码版本号";
+CM_ SG_ 1808 SwVersDVN "软件数据版本号";
+CM_ SG_ 851 Compressor2Voltage "压缩机母线电压";
+CM_ SG_ 851 Compressor2Current "压缩机母线电流";
+CM_ SG_ 851 Compressor2speedset "压缩机转速";
+CM_ SG_ 851 Compressor2state "压缩机状态 
+01：待机（不使能）
+02：运行
+03：故障停机";
+CM_ SG_ 851 Compressor2Fault1 "欠压；使能指令后小于220V 
+0：正常；1故障";
+CM_ SG_ 851 Compressor2Fault2 "过压；大于420V 
+0：正常；1故障";
+CM_ SG_ 851 Compressor2Fault3 "母线过流；均值大于16A 
+0：正常；1故障";
+CM_ SG_ 851 Compressor2Fault4 "过热；90摄氏度保护（IGBT） 
+0：正常；1故障";
+CM_ SG_ 851 Compressor2Fault5 "控制器自检失败：电流传感器检测，温度传感器检测开路或短路 
+0：正常；1故障";
+CM_ SG_ 851 Compressor2Fault6 "锁定（连续起动失败10次，不能自恢复） 
+0：正常；1故障";
+CM_ SG_ 851 Compressor2Fault7 "相电流过流（RMS）：瞬时30A（60ms）；持续16A（2s） 
+0：正常；1故障";
+CM_ SG_ 851 Compressor2Fault8 "通信故障（250个周期） 
+0：正常；1故障";
+CM_ SG_ 851 Compressor2Fault9 "预留";
+CM_ SG_ 851 Compressor2Fault10 "预留";
+CM_ SG_ 851 Compressor2Fault11 "预留";
+CM_ SG_ 851 Compressor2CurrentRMS "压缩机相电流（有效值）";
+CM_ SG_ 852 Compressor2temp "压缩机温度";
+CM_ SG_ 852 Compressor2NoCanTime "压缩机无通信计时";
+CM_ SG_ 852 Compressor2Power "压缩机功率";
+CM_ SG_ 852 Compressor2CurrentRMS1 "压缩机相电流";
+CM_ SG_ 852 Compressor2enable "压缩机使能状态反馈";
+CM_ SG_ 852 Compressor2OverCurrentCount "压缩机过流次数";
+CM_ SG_ 850 Compressor2Cmd "压缩机使能 
+0x00:不使能  
+0x10:使能";
+CM_ SG_ 850 Compressors2peedse "压缩机转速给定(to com)";
+CM_ SG_ 850 BatCoolInTemp2 "电池包入水口温度";
+CM_ SG_ 850 Compressor2DischargePressure "压缩机排气压力";
+CM_ SG_ 850 Compressor2DischargeTemp "压缩机排气温度";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 2 50000;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "CAN2";
+BA_ "GenMsgCycleTime" BO_ 784 20;
+BA_ "GenMsgCycleTime" BO_ 785 20;
+BA_ "GenMsgCycleTime" BO_ 788 20;
+BA_ "GenMsgCycleTime" BO_ 786 20;
+BA_ "GenMsgCycleTime" BO_ 787 20;
+BA_ "GenMsgCycleTime" BO_ 1601 200;
+BA_ "GenMsgCycleTime" BO_ 385 10;
+BA_ "GenMsgCycleTime" BO_ 386 10;
+BA_ "GenMsgCycleTime" BO_ 387 10;
+BA_ "GenMsgCycleTime" BO_ 1297 100;
+BA_ "GenMsgCycleTime" BO_ 1617 1000;
+BA_ "GenMsgCycleTime" BO_ 1618 1000;
+BA_ "GenMsgCycleTime" BO_ 1619 1000;
+BA_ "GenMsgCycleTime" BO_ 1539 500;
+BA_ "GenMsgCycleTime" BO_ 1540 500;
+BA_ "GenMsgCycleTime" BO_ 1537 500;
+BA_ "GenMsgCycleTime" BO_ 1538 500;
+BA_ "GenMsgCycleTime" BO_ 339 10;
+BA_ "GenMsgCycleTime" BO_ 371 10;
+BA_ "GenMsgCycleTime" BO_ 547 1000;
+BA_ "GenMsgCycleTime" BO_ 1155 1000;
+BA_ "GenMsgCycleTime" BO_ 1156 1000;
+BA_ "GenMsgCycleTime" BO_ 289 10;
+BA_ "GenMsgCycleTime" BO_ 530 20;
+BA_ "GenMsgCycleTime" BO_ 535 20;
+BA_ "GenMsgCycleTime" BO_ 775 10;
+BA_ "GenMsgCycleTime" BO_ 1312 10;
+BA_ "GenMsgCycleTime" BO_ 1313 10;
+BA_ "GenMsgCycleTime" BO_ 257 10;
+BA_ "GenMsgCycleTime" BO_ 513 20;
+BA_ "GenMsgCycleTime" BO_ 514 20;
+BA_ "GenMsgCycleTime" BO_ 1792 10;
+BA_ "GenMsgCycleTime" BO_ 1793 10;
+BA_ "GenMsgCycleTime" BO_ 1795 10;
+BA_ "GenMsgCycleTime" BO_ 1794 10;
+BA_ "GenMsgCycleTime" BO_ 1808 2000;
+BA_ "GenMsgCycleTime" BO_ 851 100;
+BA_ "GenMsgCycleTime" BO_ 852 100;
+BA_ "GenMsgCycleTime" BO_ 850 100;
+VAL_ 784 Apu2EngSts 0 "等待" 1 "启动中" 2 "启动成功" 3 "运启动故障" 4 "停机" ;
+VAL_ 784 Apu2EngCtrlModSts 0 "无控制" 1 "控转速模式" 2 "控扭矩模式" 3 "限速限扭模式" ;
+VAL_ 785 Apu2FltRnk 0 "无故障" 1 "一级故障" 2 "二级故障" 3 "三级故障" ;
+VAL_ 785 Apu2CtrlMod 0 "Standy" 1 "Strt" 2 "Idle" 3 "Stop" 4 "PwrCtrl" 5 "SpdPwrCtrl" ;
+VAL_ 385 BCU2HeatErr 0 "无故障" 1 "有故障" ;
+VAL_ 386 BCU2pauseChargeFault 0 "无故障" 2 "充电桩要求停止充电" 3 "BMS充电通信类故障" 4 "整车要求停止充电" 6 "CC2/CC断开连接停止充电" ;
+VAL_ 386 BCU2NegRlyClsd 0 "Open" 1 "Close" ;
+VAL_ 387 BCU2DChrgRlyClsd 0 "Open" 1 "Close" ;
+VAL_ 387 BCU2CoolgReq 0 "无需求" 1 "有冷却需求" ;
+VAL_ 1618 BCU2CellDeltaVolRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2CellDeltaVolRank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2CellUnderVolRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2CellUnderVolRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2CellUnderVolRank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2CellOverVolRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2CellOverVolRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2CellOverVolRank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverCurtChrgRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverCurtChrgRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverCurtChrgRank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2PrechrgFailErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2DCRlyPAdhErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2MaiRlyPAdhErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2MaiRlyNAdhErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2CC2Err 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverPeakCurtDischrgRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverPeakCurtDischrgRank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverCurtDischrgRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverCurtDischrgRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverCurtDischrgRank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverPeakCurtChrgRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverPeakCurtChrgRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverPeakCurtChrgRank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattUnderTempRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattOverTempRank4 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattOverTempRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattOverTempRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2ChrgErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattSOHLo 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2TotVolRatiErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2OverPeakCurtDischrgRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattOverURank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattOverVolRank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2InsuFlt4 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2InsuFlt2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2HVILErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2DeltaTempRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2DeltaTempRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattUnderTempRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2SOCHopErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2SOCcalcErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattOverPwr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2DCchrgInsuFlt 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattUnderVolRank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattUnderVolRank2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattUnderURank1 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BattOverURank3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2TotVolSnsrElecErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2SlaveCALFAULT 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2InlrCANErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2ChrgCANErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2VehCANErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2BlcErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2ChargerOverTemp3 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2ChargerOverTemp2 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2DCchrgTemErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2EEpErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2WatchDogErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2ROMCheckErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2RAMCheckErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2TempSnsrElecErr 0 "无故障" 1 "有故障" ;
+VAL_ 1618 BCU2TotCurtSnsrElecErr 0 "无故障" 1 "有故障" ;
+VAL_ 1539 Dch2Mode 0 "停止" 1 "运行中" 2 "故障" ;
+VAL_ 1539 Dch2FaultInfo 0 "输入欠压" 1 "输入过压" 2 "输入过流" 3 "输出欠压" 4 "输出过压" 5 "输出过流" 6 "模块过温" 7 "降功率运行" 8 "通讯故障" 9 "预留" 10 "预留" 11 "预留" 12 "预留" 13 "预留" 14 "预留" 15 "预留" ;
+VAL_ 1540 Dch2EnableKL15 0 "有效" 1 "无效" ;
+VAL_ 1537 Dcl2Mode 0 "停止" 1 "运行中" 2 "故障" ;
+VAL_ 1537 Dcl2FaultInfo 0 "输入欠压" 1 "输入过压" 2 "输入过流" 3 "输出欠压" 4 "输出过压" 5 "输出过流" 6 "模块过温" 7 "降功率运行" 8 "通讯故障" 9 "预留" 10 "预留" 11 "预留" 12 "预留" 13 "预留" 14 "预留" 15 "预留" ;
+VAL_ 1538 Dcl2EnableKL15 0 "有效" 1 "无效" ;
+VAL_ 547 MCU2MotSts 0 "Reserved" 1 "耗电" 2 "发电" 3 "关闭状态" 4 "准备状态" ;
+VAL_ 289 VCU2PtWhlLocn 0 "无效" 1 "左" 2 "右" ;
+VAL_ 530 RunningParking2Status 0 "驻车" 1 "行车" 2 "预留" 3 "预留" ;
+VAL_ 530 ESTOP2 0 "正常" 1 "制动" 2 "无效" 3 "无效" ;
+VAL_ 530 VcuWbs2PtWhlLocn 0 "无效" 1 "左" 2 "右" ;
+VAL_ 535 Apu2StrtReq 0 "停机" 1 "起动" ;
+VAL_ 257 PtWhlLocnR 0 "无效" 1 "左" 2 "右" ;
+VAL_ 257 PtWhlCompanionBattAvlR 0 "不可用" 1 "可用" ;
+VAL_ 257 PtWhlTypR 0 "无效" 1 "纯电" 2 "混动" ;
+VAL_ 257 VcuHvActvR 0 "失败" 1 "成功" ;
+VAL_ 257 VcuLvActvR 0 "失败" 1 "成功" ;
+VAL_ 257 VcuBcuFltRankR 0 "无故障" 1 "一级故障" 2 "二级故障" 3 "三级故障" 4 "四级故障" ;
+VAL_ 257 BcuCanStR 0 "无故障" 1 "故障" ;
+VAL_ 257 EpbCtrlStsFbR 0 "初始化" 1 "正在夹紧" 2 "正在释放" ;
+VAL_ 257 VcuBcupauseChargeFaultR 0 "无故障" 2 "充电桩要求停止充电" 3 "BMS充电通信类故障" 4 "整车要求停止充电" 6 "CC2/CC断开连接停止充电" ;
+VAL_ 257 ErrChrgInhbReqR 0 "无故障" 1 "故障" ;
+VAL_ 257 ErrLvUpInhbR 0 "无故障" 1 "故障" ;
+VAL_ 257 ErrLvPwrDwnReqR 0 "无故障" 1 "故障" ;
+VAL_ 513 StatusWBS2 0 "未工作" 1 "正常工作" ;
+VAL_ 513 WBS2EPBRequest1 0 "无驻车请求" 1 "请求驻车" ;
+VAL_ 513 WBS2RunParkStatus1 0 "驻车" 1 "行车" 2 "急停状态" 3 "预留" ;
+VAL_ 513 WBS2FaultLevel 0 "无故障" 1 "一级故障" 2 "二级故障" 3 "三级故障" 4 "四级故障" ;
+VAL_ 513 WBS2BrkCmdAbnormal1 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2PTrackAbnormal1 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2PShake1 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2TSnsrFault1 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2TSnsrFault2 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2PSnsrFault2 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2ECUTHigh2 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2VLow2 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2VHigh2 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2PTrackAbnormal2 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2PShake2 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2Mismatch2 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2CANTimeout3 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2OverCurrent4 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2ISnsrAbnormal4 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2VLow4 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2VHigh4 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2PSwFault4 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2PreDriverFault4 0 "正常" 1 "故障" ;
+VAL_ 513 WBS2MotorPosnSnsrFault4 0 "正常" 1 "故障" ;
+VAL_ 1792 VcuEPBCtrl 1 "夹紧" 0 "释放" ;
+VAL_ 1792 VcuCANStStopReq 0 "发送" 1 "不发送" ;
+VAL_ 1792 VcuApuCAN1StStopReq 0 "发送" 1 "不发送" ;
+VAL_ 1792 VcuApuCAN2StStopReq 0 "发送" 1 "不发送" ;
+VAL_ 1792 VcuDataStoreReq 0 "无请求" 1 "有请求" ;
+VAL_ 1794 CAN2VIUId101CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN1ApuId310CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN2ApuId310CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN1BcuId181CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN2BcuId181CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 ComId421CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN1DCLId601CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN2DCLId601CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN1DCHId603CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN2DCHId603CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 ImuId500CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN1McuId153CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN2McuId153CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 MdcId148CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 TboxId501CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN1WbsId201CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN2WbsId201CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN1Acp352CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN2Acp353CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 CAN2Acp354CanStsVcu 0 "正常" 1 "长时丢帧" ;
+VAL_ 1794 EpbCtrlStsInfo 0 "初始化" 1 "正在夹紧" 2 "正在释放" ;
+

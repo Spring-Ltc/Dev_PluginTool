@@ -1,0 +1,1012 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: COM IMU MDC PWC TBOX VIU
+
+
+BO_ 1280 CAN4_IMU_VIU_0x500: 8 IMU
+ SG_ AX : 7|16@0+ (0.00012207,-4) [-4|3.9999] "g"  VIU
+ SG_ AY : 23|16@0+ (0.00012207,-4) [-4|3.9999] "g"  VIU
+ SG_ AZ : 39|16@0+ (0.00012207,-4) [-4|3.9999] "g"  VIU
+
+BO_ 1283 CAN4_IMU_VIU_0x503: 8 IMU
+ SG_ Alti : 7|32@0+ (0.001,-10000) [-10000|10000] "m"  VIU
+ SG_ TiInWeek : 39|32@0+ (1,0) [0|604800000] "ms"  VIU
+
+BO_ 1284 CAN4_IMU_VIU_0x504: 8 IMU
+ SG_ Ltitd : 7|32@0+ (1E-007,-180) [-90|90] "°"  VIU
+ SG_ Lngtd : 39|32@0+ (1E-007,-180) [-180|180] "°"  VIU
+
+BO_ 1285 CAN4_IMU_VIU_0x505: 8 IMU
+ SG_ VNorth : 7|16@0+ (0.0030517,-100) [-100|99.9932] "mps"  VIU
+ SG_ VEast : 23|16@0+ (0.0030517,-100) [-100|99.9932] "mps"  VIU
+ SG_ VGnd : 39|16@0+ (0.0030517,-100) [-100|99.9932] "mps"  VIU
+
+BO_ 1286 CAN4_IMU_VIU_0x506: 8 IMU
+ SG_ PosnIniFlgGnss : 7|8@0+ (1,0) [0|255] ""  VIU
+ SG_ NumSVGnss : 15|8@0+ (1,0) [0|255] ""  VIU
+ SG_ YawIniFlgGnss : 23|8@0+ (1,0) [0|255] ""  VIU
+ SG_ DftlDly : 31|8@0+ (1,0) [0|255] "s"  VIU
+ SG_ VehStFlg : 39|8@0+ (1,0) [0|255] ""  VIU
+ SG_ InsStFlg : 63|8@0+ (1,0) [0|255] ""  VIU
+
+BO_ 1287 CAN4_IMU_VIU_0x507: 8 IMU
+ SG_ StdDeLngtd : 7|16@0+ (0.001,0) [0|65.535] ""  VIU
+ SG_ StdDeYaw : 23|16@0+ (0.001,0) [0|65.535] ""  VIU
+ SG_ StdDeHei : 39|16@0+ (0.001,0) [0|65.535] ""  VIU
+ SG_ StdDeLtitd : 55|16@0+ (0.01,0) [0|655.35] ""  VIU
+
+BO_ 1288 CAN4_IMU_VIU_0x508: 8 IMU
+ SG_ Yr : 7|8@0+ (1,2000) [2000|2255] ""  VIU
+ SG_ Mth : 15|8@0+ (1,0) [0|12] ""  VIU
+ SG_ Day : 23|8@0+ (1,0) [0|31] ""  VIU
+ SG_ Hr : 31|8@0+ (1,0) [0|24] ""  VIU
+ SG_ Mins : 39|8@0+ (1,0) [0|60] ""  VIU
+ SG_ Sec : 47|8@0+ (1,0) [0|60] ""  VIU
+ SG_ MilliSec : 55|16@0+ (1,0) [0|999] ""  VIU
+
+BO_ 1289 CAN4_IMU_VIU_0x509: 8 IMU
+ SG_ LtitdGnss : 7|32@0+ (1E-007,-180) [-90|90] "°"  VIU
+ SG_ LngtdGnss : 39|32@0+ (1E-007,-180) [-180|180] "°"  VIU
+
+BO_ 1290 CAN4_IMU_VIU_0x50A: 8 IMU
+ SG_ AltiGnss : 7|32@0+ (0.001,-10000) [-10000|10000] "m"  VIU
+ SG_ WeekGnss : 39|32@0+ (1,0) [0|65500] "week"  VIU
+
+BO_ 1291 CAN4_IMU_VIU_0x50B: 8 IMU
+ SG_ GDOPGnss : 7|16@0+ (0.01,0) [0|100] ""  VIU
+ SG_ PDOPGnss : 23|16@0+ (0.01,0) [0|100] ""  VIU
+ SG_ HDOPGnss : 39|16@0+ (0.01,0) [0|100] ""  VIU
+ SG_ HTDOPGnss : 55|16@0+ (0.01,0) [0|100] ""  VIU
+
+BO_ 1292 CAN4_IMU_VIU_0x50C: 8 IMU
+ SG_ YawAgGnss : 7|16@0+ (0.010986,-360) [-180|180] "°"  VIU
+ SG_ PitchAgGnss : 23|16@0+ (0.010986,-360) [-180|180] "°"  VIU
+
+BO_ 1293 CAN4_IMU_VIU_0x50D: 8 IMU
+ SG_ WX : 7|16@0+ (0.0076293,-250) [-250|249.9862] "dgps"  VIU
+ SG_ WY : 23|16@0+ (0.0076293,-250) [-250|249.9862] "dgps"  VIU
+ SG_ WZ : 39|16@0+ (0.0076293,-250) [-250|249.9862] "dgps"  VIU
+
+BO_ 1294 CAN4_IMU_VIU_0x50E: 8 IMU
+ SG_ AgY : 7|16@0+ (0.010986,-360) [-90|90] "°"  VIU
+ SG_ AgX : 23|16@0+ (0.010986,-360) [-180|180] "°"  VIU
+ SG_ AgZ : 39|16@0+ (0.010986,-360) [-180|180] "°"  VIU
+
+BO_ 328 CAN4_MDC_VIU_0x148: 8 MDC
+ SG_ CenterSteerReq : 7|8@0+ (1,-100) [-100|100] ""  VIU
+ SG_ SteerRReq : 15|13@0+ (0.1,-400) [-400|400] "m"  VIU
+ SG_ AutSteerModReq : 24|1@0+ (1,0) [0|1] ""  VIU
+ SG_ VehVTarReq : 18|10@0+ (0.1,0) [0|100] "km/h"  VIU
+ SG_ GearPosnReq : 33|2@0+ (1,0) [0|3] ""  VIU
+ SG_ MdcHdLampSet : 40|1@0+ (1,0) [0|1] ""  VIU
+ SG_ TurnLeftLampReq : 41|1@0+ (1,0) [0|1] ""  VIU
+ SG_ TurnRightLampReq : 42|1@0+ (1,0) [0|1] ""  VIU
+ SG_ WarnLampReq : 43|1@0+ (1,0) [0|1] ""  VIU
+ SG_ TrumpReqReq : 44|1@0+ (1,0) [0|1] ""  VIU
+ SG_ AutoDrvAllw : 45|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Cntr148 : 53|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 329 CAN4_MDC_VIU_0x149: 8 MDC
+ SG_ EmgBrkReq : 0|1@0+ (1,0) [0|1] ""  VIU
+ SG_ PtModReq : 1|1@0+ (1,0) [0|1] ""  VIU
+ SG_ VehATarReq : 14|7@0+ (1,0) [0|10] "m/s^2"  VIU
+ SG_ MdcDrvLvrPosn : 39|8@0+ (1,-100) [-100|100] ""  VIU
+ SG_ MdcSteerLvrPosn : 47|8@0+ (1,-100) [-100|100] ""  VIU
+ SG_ MdcBrkLvrPosn : 55|8@0+ (1,0) [0|100] ""  VIU
+ SG_ MdcPrkgBrkSet : 2|1@0+ (1,0) [0|1] ""  VIU
+ SG_ MdcT : 23|8@0+ (1,0) [0|100] "°C"  VIU
+ SG_ Cntr149 : 27|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 769 CAN4_PWC_VIU_0x301: 8 PWC
+ SG_ AgrSnsrVltg : 7|16@0+ (1,0) [0|65535] "mV"  VIU
+ SG_ PullWireSnsrVltg : 23|16@0+ (1,0) [0|65535] "mV"  VIU
+
+BO_ 1281 CAN4_TBOX_VIU_0x501: 8 TBOX
+ SG_ WirelsConn : 0|1@0+ (1,0) [0|1] ""  VIU
+ SG_ EmgyStopOnSet : 1|1@0+ (1,0) [0|1] ""  VIU
+ SG_ KeySet : 3|2@0+ (1,0) [0|2] ""  VIU
+ SG_ StrSet : 4|1@0+ (1,0) [0|1] ""  VIU
+ SG_ PrkBrkOn : 5|1@0+ (1,0) [0|1] ""  VIU
+ SG_ PwrModSet : 7|2@0+ (1,0) [0|3] ""  VIU
+ SG_ PwrLocnSet : 10|2@0+ (1,0) [0|2] ""  VIU
+ SG_ CenterSteerSet : 11|1@0+ (1,0) [0|1] ""  VIU
+ SG_ BarrModSet : 12|1@0+ (1,0) [0|1] ""  VIU
+ SG_ EquipmentPwr : 15|1@0+ (1,0) [0|1] ""  VIU
+ SG_ OperModSet : 17|2@0+ (1,0) [0|3] ""  VIU
+ SG_ LampSet : 18|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ReLiSet : 21|2@0+ (1,0) [0|3] ""  VIU
+ SG_ SteerLamp : 23|2@0+ (1,0) [0|3] ""  VIU
+ SG_ SpdLvl : 25|1@0+ (1,0) [0|1] ""  VIU
+ SG_ PullWireMod : 26|1@0+ (1,0) [0|1] ""  VIU
+ SG_ HornSet : 27|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Cntr501 : 59|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 1282 CAN4_TBOX_VIU_0x502: 8 TBOX
+ SG_ DrvLvrPosn : 7|8@0+ (1,-100) [-100|100] ""  VIU
+ SG_ SteerLvrPosn : 15|8@0+ (1,-100) [-100|100] ""  VIU
+ SG_ BrkLvrPosn : 23|8@0+ (1,0) [0|100] ""  VIU
+ SG_ EquipMod : 27|4@0+ (1,0) [0|15] ""  VIU
+ SG_ Resd1 : 33|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Resd2 : 34|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Resd3 : 35|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Resd4 : 36|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Resd5 : 37|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Resd6 : 38|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Cntr502 : 59|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 321 CAN4_VIU_MDC_0x141: 8 VIU
+ SG_ AutVehVFb : 19|11@0+ (0.1,-100) [-100|100] "km/h"  MDC
+ SG_ EmgBrkStsFb : 36|1@0+ (1,0) [0|1] ""  MDC
+ SG_ SteerModStsFb : 37|1@0+ (1,0) [0|1] ""  MDC
+ SG_ MdcVehRdyFb : 38|1@0+ (1,0) [0|1] ""  MDC
+ SG_ ActvGearPosnFb : 24|2@0+ (1,0) [0|3] ""  MDC
+ SG_ Cntr141 : 53|5@0+ (1,0) [0|15] ""  MDC
+ SG_ ActvSteerR : 35|13@0+ (0.1,-400) [-400|400] "m"  MDC
+ SG_ VcuEngStsFb : 57|1@0+ (1,0) [0|1] ""  MDC
+ SG_ VcuDrvModFb : 59|2@0+ (1,0) [0|2] ""  MDC
+ SG_ VcuFltRankFb : 48|4@0+ (1,0) [0|15] ""  MDC
+
+BO_ 1025 CAN4_VIU_TBOX_0x401: 8 VIU
+ SG_ LvOnFb : 0|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ HvOnFb : 1|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ BarrModFb : 2|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PwrModFb : 4|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ PwrExchStsFb : 6|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ EmgyStopOnFb : 7|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ VehRdyFb : 12|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ PullWireModFb : 13|1@0+ (1,0) [0|1] ""  TBOX
+ SG_ OperModFb : 15|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ Batt1SocFb : 9|8@0+ (1,0) [0|100] ""  TBOX
+ SG_ EquipModFb : 35|4@0+ (1,0) [0|15] ""  TBOX
+ SG_ Batt1MaxTFb : 28|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ VehVFb : 47|8@0+ (1,0) [0|150] "km/h"  TBOX
+ SG_ Batt1VltgFb : 55|16@0+ (0.1,0) [0|1000] "V"  TBOX
+
+BO_ 1026 CAN4_VIU_TBOX_0x402: 8 VIU
+ SG_ VcuErrNrFb : 7|16@0+ (1,0) [0|65535] ""  TBOX
+ SG_ ImuSysCalModSts : 25|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ PtfmTypFb : 18|3@0+ (1,0) [0|7] ""  TBOX
+ SG_ GearFb : 29|2@0+ (1,0) [0|3] ""  TBOX
+ SG_ Batt2SocFb : 39|8@0+ (1,0) [0|100] "%"  TBOX
+ SG_ Batt2VltgFb : 47|16@0+ (0.1,0) [0|1000] "V"  TBOX
+ SG_ Batt2MaxTFb : 63|8@0+ (1,-50) [-50|200] "℃"  TBOX
+
+BO_ 1027 CAN4_VIU_TBOX_0x403: 8 VIU
+ SG_ TotVygFb : 7|16@0+ (1,0) [0|65535] "km"  TBOX
+ SG_ LfPFb : 23|10@0+ (0.0238,0) [0|10] "mpa"  TBOX
+ SG_ RfPFb : 29|10@0+ (0.0238,0) [0|10] "mpa"  TBOX
+
+BO_ 1028 CAN4_VIU_TBOX_0x404: 8 VIU
+ SG_ EngSpdFb1 : 7|16@0+ (1,0) [0|65535] "rpm"  TBOX
+ SG_ EngCooltTFb1 : 23|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ IsgPwrOutFb1 : 31|8@0+ (1,0) [0|200] "kW"  TBOX
+ SG_ IsgMotTFb1 : 39|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ IsgMcuTFb1 : 47|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ FuQntyFb1 : 55|8@0+ (1,0) [0|100] "%"  TBOX
+
+BO_ 1032 CAN4_VIU_TBOX_0x408: 8 VIU
+ SG_ EngSpdFb2 : 7|16@0+ (1,0) [0|65535] "rpm"  TBOX
+ SG_ EngCooltTFb2 : 23|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ IsgPwrOutFb2 : 31|8@0+ (1,0) [0|200] "kW"  TBOX
+ SG_ IsgMotTFb2 : 39|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ IsgMcuTFb2 : 47|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ FuQntyFb2 : 55|8@0+ (1,0) [0|100] "%"  TBOX
+
+BO_ 1029 CAN4_VIU_TBOX_0x405: 8 VIU
+ SG_ MotFlTFb : 7|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ MotFrTFb : 15|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ MotFlIgbtTFb : 23|8@0+ (1,-50) [-50|200] "℃"  TBOX
+ SG_ MotFrIgbtTFb : 31|8@0+ (1,-50) [-50|200] "℃"  TBOX
+
+BO_ 1030 CAN4_VIU_TBOX_0x406: 8 VIU
+ SG_ AgRollFb : 7|16@0+ (0.01,-327.68) [-327.68|327.67] "°"  TBOX
+ SG_ AgPitchFb : 23|16@0+ (0.01,-327.68) [-327.68|327.67] "°"  TBOX
+ SG_ AgHeadingFb : 39|16@0+ (0.01,0) [0|655.35] "°"  TBOX
+
+BO_ 1031 CAN4_VIU_TBOX_0x407: 8 VIU
+ SG_ ParkModFb : 0|1@0+ (1,0) [0|1] "N/A"  TBOX
+ SG_ LeBattStsFb : 1|1@0+ (1,0) [0|1] "N/A"  TBOX
+ SG_ RiBattStsFb : 2|1@0+ (1,0) [0|1] "N/A"  TBOX
+ SG_ PwrLocnFb : 9|2@0+ (1,0) [0|3] "N/A"  TBOX
+ SG_ MaiCtrlrLocnFb : 4|1@0+ (1,0) [0|1] "N/A"  TBOX
+ SG_ LeLampCtrl : 5|1@0+ (1,0) [0|1] "N/A"  TBOX
+ SG_ RiLampCtrl : 6|1@0+ (1,0) [0|1] "N/A"  TBOX
+
+BO_ 1073 CAN4_VIU_COM_0x431: 8 VIU
+ SG_ ComLvOnFb : 1|1@0+ (1,0) [0|1] ""  COM
+ SG_ ComHvOnFb : 2|1@0+ (1,0) [0|1] ""  COM
+ SG_ ComPwrModFb : 4|2@0+ (1,0) [0|3] ""  COM
+ SG_ ComPwrExchStsFb : 6|2@0+ (1,0) [0|3] ""  COM
+ SG_ ComEmgyStopOnFb : 7|1@0+ (1,0) [0|1] ""  COM
+ SG_ ComOperModFb : 9|2@0+ (1,0) [0|3] ""  COM
+ SG_ ComVehRdyFb : 10|1@0+ (1,0) [0|1] ""  COM
+ SG_ ComBarrModFb : 11|1@0+ (1,0) [0|1] ""  COM
+ SG_ ComParkModFb : 12|1@0+ (1,0) [0|1] "N/A"  COM
+ SG_ ComLeBattStsFb : 13|1@0+ (1,0) [0|1] "N/A"  COM
+ SG_ ComRiBattStsFb : 14|1@0+ (1,0) [0|1] "N/A"  COM
+ SG_ ComPullWireModFb : 15|1@0+ (1,0) [0|1] ""  COM
+ SG_ ComPwrLocnFb : 57|2@0+ (1,0) [0|3] "N/A"  COM
+ SG_ ComMaiCtrlrLocnFb : 0|1@0+ (1,0) [0|1] "N/A"  COM
+ SG_ ComBatt1SocFb : 23|8@0+ (1,0) [0|100] ""  COM
+ SG_ ComBatt1VltgFb : 31|16@0+ (0.1,0) [0|1000] "V"  COM
+ SG_ ComBatt1MaxTFb : 47|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComVehVFb : 55|8@0+ (1,0) [0|150] "km/h"  COM
+ SG_ ComEquipModFb : 63|4@0+ (1,0) [0|15] ""  COM
+
+BO_ 1074 CAN4_VIU_COM_0x432: 8 VIU
+ SG_ ComVcuErrNrFb : 7|16@0+ (1,0) [0|65535] ""  COM
+ SG_ ComImuSysCalModSts : 25|2@0+ (1,0) [0|3] ""  COM
+ SG_ ComPtfmTypFb : 18|3@0+ (1,0) [0|7] ""  COM
+ SG_ ComGearFb : 29|2@0+ (1,0) [0|3] ""  COM
+ SG_ ComBatt2SocFb : 39|8@0+ (1,0) [0|100] "%"  COM
+ SG_ ComBatt2VltgFb : 47|16@0+ (0.1,0) [0|1000] "V"  COM
+ SG_ ComBatt2MaxTFb : 63|8@0+ (1,-50) [-50|200] "℃"  COM
+
+BO_ 1075 CAN4_VIU_COM_0x433: 8 VIU
+ SG_ ComTotVygFb : 7|16@0+ (1,0) [0|65535] "km"  COM
+ SG_ ComLfPFb : 23|10@0+ (0.0238,0) [0|10] "mpa"  COM
+ SG_ ComRfPFb : 39|10@0+ (0.0238,0) [0|10] "mpa"  COM
+
+BO_ 1076 CAN4_VIU_COM_0x434: 8 VIU
+ SG_ ComEngSpdFb1 : 7|16@0+ (1,0) [0|65535] "rpm"  COM
+ SG_ ComEngCooltTFb1 : 23|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComIsgPwrOutFb1 : 31|8@0+ (1,0) [0|200] "kW"  COM
+ SG_ ComIsgMotTFb1 : 39|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComIsgMcuTFb1 : 47|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComFuQntyFb1 : 55|8@0+ (1,0) [0|100] "%"  COM
+
+BO_ 1079 CAN4_VIU_COM_0x437: 8 VIU
+ SG_ ComEngSpdFb2 : 7|16@0+ (1,0) [0|65535] "rpm"  COM
+ SG_ ComEngCooltTFb2 : 23|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComIsgPwrOutFb2 : 31|8@0+ (1,0) [0|200] "kW"  COM
+ SG_ ComIsgMotTFb2 : 39|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComIsgMcuTFb2 : 47|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComFuQntyFb2 : 55|8@0+ (1,0) [0|100] "%"  COM
+
+BO_ 1077 CAN4_VIU_COM_0x435: 8 VIU
+ SG_ ComMotFlTFb : 7|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComMotFrTFb : 15|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComMotFlIgbtTFb : 23|8@0+ (1,-50) [-50|200] "℃"  COM
+ SG_ ComMotFrIgbtTFb : 31|8@0+ (1,-50) [-50|200] "℃"  COM
+
+BO_ 1078 CAN4_VIU_COM_0x436: 8 VIU
+ SG_ ComAgRollFb : 7|16@0+ (0.01,-327.68) [-327.68|327.67] "°"  COM
+ SG_ ComAgPitchFb : 23|16@0+ (0.01,-327.68) [-327.68|327.67] "°"  COM
+ SG_ ComAgHeadingFb : 39|16@0+ (0.01,0) [0|655.35] "°"  COM
+
+BO_ 1313 CAN4_VIU_MDC_0x521: 8 VIU
+ SG_ VcuErrNrCycFb : 7|10@0+ (1,0) [0|1000] ""  MDC
+ SG_ VcuErrTotFb : 13|10@0+ (1,0) [0|1000] ""  MDC
+
+BO_ 1057 CAN4_COM_VIU_0x421: 8 COM
+ SG_ ComWirelsConn : 0|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComEmgyStopOnSet : 1|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComKeySet : 3|2@0+ (1,0) [0|2] ""  VIU
+ SG_ ComStrSet : 4|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComPrkBrkOn : 5|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComPwrModSet : 7|2@0+ (1,0) [0|3] ""  VIU
+ SG_ ComPwrLocnSet : 10|2@0+ (1,0) [0|2] ""  VIU
+ SG_ ComCenterSteerSet : 11|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComBarrModSet : 12|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComEquipmentPwr : 15|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComOperModSet : 17|2@0+ (1,0) [0|3] ""  VIU
+ SG_ ComLampSet : 18|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComReLiSet : 21|2@0+ (1,0) [0|3] ""  VIU
+ SG_ ComSteerLamp : 23|2@0+ (1,0) [0|3] ""  VIU
+ SG_ ComSpdLvl : 25|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComPullWireMod : 26|1@0+ (1,0) [0|1] ""  VIU
+ SG_ ComHornSet : 27|1@0+ (1,0) [0|1] ""  VIU
+ SG_ Cntr421 : 59|4@0+ (1,0) [0|15] ""  VIU
+
+BO_ 1058 CAN4_COM_VIU_0x422: 8 COM
+ SG_ ComDrvLvrPosn : 7|8@0+ (1,-100) [-100|100] ""  VIU
+ SG_ ComSteerLvrPosn : 15|8@0+ (1,-100) [-100|100] ""  VIU
+ SG_ ComBrkLvrPosn : 23|8@0+ (1,0) [0|100] ""  VIU
+ SG_ ComEquipMod : 27|4@0+ (1,0) [0|15] ""  VIU
+ SG_ Cntr422 : 59|4@0+ (1,0) [0|15] ""  VIU
+
+
+
+CM_ SG_ 1280 AX "X向加速度";
+CM_ SG_ 1280 AY "Y向加速度";
+CM_ SG_ 1280 AZ "Z向加速度";
+CM_ SG_ 1283 Alti "海拔高度";
+CM_ SG_ 1283 TiInWeek "GPS 周内秒";
+CM_ SG_ 1284 Ltitd "纬度";
+CM_ SG_ 1284 Lngtd "经度";
+CM_ SG_ 1285 VNorth "车速北向分量";
+CM_ SG_ 1285 VEast "车速东向分量";
+CM_ SG_ 1285 VGnd "车速地向分量";
+CM_ SG_ 1286 PosnIniFlgGnss "GNSS位置初始化标志位 
+0:NONE 无解
+16:SINGLE 单点定位
+17:PSRDIFF 伪距差分定位
+32:L1 FLOAT L1浮动解
+33:IONOFREE FLOAT 消电离层浮点解
+34:NARROW FLOAT 窄巷浮点解
+48:L1 INT L1固定解
+49:WIDE INT 宽巷固定解
+50:NARROW INT 窄巷固定解";
+CM_ SG_ 1286 NumSVGnss "GNSS 收星数";
+CM_ SG_ 1286 YawIniFlgGnss "GNSS航向初始化标志位 
+0:NONE 无解
+16:SINGLE 单点定位
+17:PSRDIFF 伪距差分定位
+32:L1 FLOAT L1浮动解
+33:IONOFREE FLOAT 消电离层浮点解
+34:NARROW FLOAT 窄巷浮点解
+48:L1 INT L1固定解
+49:WIDE INT 宽巷固定解
+50:NARROW INT 窄巷固定解";
+CM_ SG_ 1286 DftlDly "差分延时 （s）";
+CM_ SG_ 1286 VehStFlg "车辆状态标志位 
+0:无车辆信息；
+非 0:正常接收车辆信息";
+CM_ SG_ 1286 InsStFlg "组合导航总体状态标志位 
+0:NONE
+1:姿态初始化（航向未初始化）
+2:组合导航";
+CM_ SG_ 1287 StdDeLngtd "经度标准差";
+CM_ SG_ 1287 StdDeYaw "航向标准差";
+CM_ SG_ 1287 StdDeHei "高度标准差";
+CM_ SG_ 1287 StdDeLtitd "纬度标准差";
+CM_ SG_ 1288 Yr "年";
+CM_ SG_ 1288 Mth "月";
+CM_ SG_ 1288 Day "日";
+CM_ SG_ 1288 Hr "时";
+CM_ SG_ 1288 Mins "分";
+CM_ SG_ 1288 Sec "秒";
+CM_ SG_ 1288 MilliSec "毫秒";
+CM_ SG_ 1289 LtitdGnss "GNSS纬度";
+CM_ SG_ 1289 LngtdGnss "GNSS经度";
+CM_ SG_ 1290 AltiGnss "GNSS海拔高";
+CM_ SG_ 1290 WeekGnss "GPS 周";
+CM_ SG_ 1291 GDOPGnss "几何精度因子";
+CM_ SG_ 1291 PDOPGnss "位置精度因子";
+CM_ SG_ 1291 HDOPGnss "水平精度因子";
+CM_ SG_ 1291 HTDOPGnss "水平和时间精度因子";
+CM_ SG_ 1292 YawAgGnss "GNSS航向角";
+CM_ SG_ 1292 PitchAgGnss "GNSS俯仰角";
+CM_ SG_ 1293 WX "X向角速度";
+CM_ SG_ 1293 WY "Y向角速度";
+CM_ SG_ 1293 WZ "Z向角速度";
+CM_ SG_ 1294 AgY "Y向角度(俯仰角)";
+CM_ SG_ 1294 AgX "X向角度(横滚角)";
+CM_ SG_ 1294 AgZ "Z向角度(航向角)";
+CM_ SG_ 328 CenterSteerReq "中心转向需求";
+CM_ SG_ 328 SteerRReq "转向半径请求";
+CM_ SG_ 328 AutSteerModReq "转向模式 
+0:行驶转向
+1:中心转向";
+CM_ SG_ 328 VehVTarReq "目标车速";
+CM_ SG_ 328 GearPosnReq "档位请求 
+0:P
+1:D
+2:N（预留）
+3:R";
+CM_ SG_ 328 MdcHdLampSet "大灯 
+0:未使能
+1:使能";
+CM_ SG_ 328 TurnLeftLampReq "左转向灯 
+0:未使能
+1:使能";
+CM_ SG_ 328 TurnRightLampReq "右转向灯 
+0:未使能
+1:使能";
+CM_ SG_ 328 WarnLampReq "危险警报灯 
+0:未使能
+1:使能";
+CM_ SG_ 328 TrumpReqReq "喇叭 
+0:关闭
+1:打开";
+CM_ SG_ 328 AutoDrvAllw "自动驾驶允许 
+0:不允许
+1:允许";
+CM_ SG_ 328 Cntr148 "Counter信号";
+CM_ SG_ 329 EmgBrkReq "紧急制动 
+0:未使能
+1:使能";
+CM_ SG_ 329 PtModReq "动力总成模式请求 
+0:纯电
+1:混动";
+CM_ SG_ 329 VehATarReq "目标加速度（暂不需要）";
+CM_ SG_ 329 MdcDrvLvrPosn "驱动摇杆";
+CM_ SG_ 329 MdcSteerLvrPosn "转向摇杆";
+CM_ SG_ 329 MdcBrkLvrPosn "制动摇杆";
+CM_ SG_ 329 MdcPrkgBrkSet "驻车制动 
+0:未使能
+1:使能";
+CM_ SG_ 329 MdcT "MDC温度";
+CM_ SG_ 329 Cntr149 "Counter信号";
+CM_ SG_ 769 AgrSnsrVltg "角度传感器电压值";
+CM_ SG_ 769 PullWireSnsrVltg "拉绳传感器电压值";
+CM_ SG_ 1281 WirelsConn "连接信号 
+0:未使能
+1:使能";
+CM_ SG_ 1281 EmgyStopOnSet "急停 
+0:未急停
+1:急停";
+CM_ SG_ 1281 KeySet "钥匙档 
+0:Off档
+1:ACC档
+2:ON档";
+CM_ SG_ 1281 StrSet "可行驶使能 
+0:未使能
+1:使能";
+CM_ SG_ 1281 PrkBrkOn "驻车制动 
+0:未使能
+1:使能";
+CM_ SG_ 1281 PwrModSet "动力模式 
+0:纯电模式
+1:陆上（混动）模式";
+CM_ SG_ 1281 PwrLocnSet "能量源位置设置 
+0:默认
+1:左侧
+2:右侧";
+CM_ SG_ 1281 CenterSteerSet "中心转向 
+0:未使能
+1:使能";
+CM_ SG_ 1281 BarrModSet "越障模式 
+0:关
+1:开";
+CM_ SG_ 1281 EquipmentPwr "上装供电 
+0:关闭
+1:开启";
+CM_ SG_ 1281 OperModSet "操控模式 
+0:手操
+1:远程
+2:自主";
+CM_ SG_ 1281 LampSet "大灯开关 
+0:关闭
+1:大灯打开";
+CM_ SG_ 1281 ReLiSet "尾灯控制 
+0:关闭
+1:示廓灯
+2:警示灯
+3:预留";
+CM_ SG_ 1281 SteerLamp "转向灯 
+0:关闭
+1:左转灯
+2:右转灯";
+CM_ SG_ 1281 SpdLvl "速度档位 
+0:低速
+1:高速";
+CM_ SG_ 1281 PullWireMod "拉线模式 
+0:未使能
+1:使能";
+CM_ SG_ 1281 HornSet "喇叭 
+0:关闭
+1:打开";
+CM_ SG_ 1281 Cntr501 "心跳信号";
+CM_ SG_ 1282 DrvLvrPosn "驱动摇杆";
+CM_ SG_ 1282 SteerLvrPosn "转向摇杆";
+CM_ SG_ 1282 BrkLvrPosn "制动摇杆";
+CM_ SG_ 1282 EquipMod "单装模式 
+0:运输
+1:侦查
+2:打击
+3:支援
+4:救援
+5:其他";
+CM_ SG_ 1282 Resd1 "预留1 
+0:未使能
+1:使能";
+CM_ SG_ 1282 Resd2 "预留2 
+0:未使能
+1:使能";
+CM_ SG_ 1282 Resd3 "预留3 
+0:未使能
+1:使能";
+CM_ SG_ 1282 Resd4 "预留4 
+0:未使能
+1:使能";
+CM_ SG_ 1282 Resd5 "预留5 
+0:未使能
+1:使能";
+CM_ SG_ 1282 Resd6 "预留6 
+0:未使能
+1:使能";
+CM_ SG_ 1282 Cntr502 "心跳信号";
+CM_ SG_ 321 AutVehVFb "当前车速";
+CM_ SG_ 321 EmgBrkStsFb "紧急制动状态 
+0:未使能
+1:使能";
+CM_ SG_ 321 SteerModStsFb "转向模式状态 
+0:行驶转向
+1:中心转向";
+CM_ SG_ 321 MdcVehRdyFb "整车Ready反馈 
+0:未使能
+1:使能";
+CM_ SG_ 321 ActvGearPosnFb "实际档位 
+0:P
+1:D
+2:N（预留）
+3:R";
+CM_ SG_ 321 Cntr141 "Counter信号";
+CM_ SG_ 321 ActvSteerR "实际转向半径";
+CM_ SG_ 321 VcuEngStsFb "发动机状态 
+0:未启动
+1:启动";
+CM_ SG_ 321 VcuDrvModFb "驾驶模式反馈 
+0:手操器遥控
+1:远程遥控
+2:自主驾驶";
+CM_ SG_ 321 VcuFltRankFb "VCU故障等级 
+1:一级警告，VCU不做处理
+2:二级限制（对车速、扭矩等）
+3:三级VCU退出可行驶或整车下电或紧急停车";
+CM_ SG_ 1025 LvOnFb "低压上电反馈 
+0:失败
+1:成功";
+CM_ SG_ 1025 HvOnFb "高压上电反馈 
+0:失败
+1:成功";
+CM_ SG_ 1025 BarrModFb "越障模式反馈 
+0:关
+1:开";
+CM_ SG_ 1025 PwrModFb "动力模式反馈 
+0:纯电模式
+1:混动模式
+2:值守模式
+3:预留";
+CM_ SG_ 1025 PwrExchStsFb "能量源切换状态反馈 
+0:未切换
+1:正在切换
+2.切换成功
+3.切换失败";
+CM_ SG_ 1025 EmgyStopOnFb "急停反馈 
+0:未使能
+1:使能";
+CM_ SG_ 1025 VehRdyFb "整车Ready反馈 
+0:未使能
+1:使能";
+CM_ SG_ 1025 PullWireModFb "拉线模式反馈 
+0:关
+1:开";
+CM_ SG_ 1025 OperModFb "操控模式反馈 
+0:手操
+1:远程
+2:自主
+3:无效";
+CM_ SG_ 1025 Batt1SocFb "动力电池SOC反馈";
+CM_ SG_ 1025 EquipModFb "单装模式反馈 
+0:运输
+1:侦查
+2:打击
+3:支援
+4:救援
+5:其他";
+CM_ SG_ 1025 Batt1MaxTFb "电池最高温度反馈";
+CM_ SG_ 1025 VehVFb "车速反馈";
+CM_ SG_ 1025 Batt1VltgFb "动力电池电压反馈";
+CM_ SG_ 1026 VcuErrNrFb "整车故障码反馈";
+CM_ SG_ 1026 ImuSysCalModSts "惯导对准状态 
+0:准备
+1:粗对准
+2:精对准
+3:对准好";
+CM_ SG_ 1026 PtfmTypFb "平台组成类型反馈 
+0:A+B
+1:B+A
+2:A+A
+3:B+B
+4:预留";
+CM_ SG_ 1026 GearFb "档位反馈 
+0:P
+1:D
+2:N
+3:R";
+CM_ SG_ 1026 Batt2SocFb "动力电池2SOC反馈";
+CM_ SG_ 1026 Batt2VltgFb "动力电池2电压反馈";
+CM_ SG_ 1026 Batt2MaxTFb "电池2最高温度反馈";
+CM_ SG_ 1027 TotVygFb "总里程反馈";
+CM_ SG_ 1027 LfPFb "左行车制动压力反馈";
+CM_ SG_ 1027 RfPFb "右行车制动压力反馈";
+CM_ SG_ 1028 EngSpdFb1 "发动机1转速反馈";
+CM_ SG_ 1028 EngCooltTFb1 "发动机1水温反馈";
+CM_ SG_ 1028 IsgPwrOutFb1 "发电功率反馈1";
+CM_ SG_ 1028 IsgMotTFb1 "ISG电机1温度反馈";
+CM_ SG_ 1028 IsgMcuTFb1 "ISG电机控制器1温度反馈";
+CM_ SG_ 1028 FuQntyFb1 "燃油量反馈1";
+CM_ SG_ 1032 EngSpdFb2 "发动机2转速反馈";
+CM_ SG_ 1032 EngCooltTFb2 "发动机2水温反馈";
+CM_ SG_ 1032 IsgPwrOutFb2 "发电功率反馈2";
+CM_ SG_ 1032 IsgMotTFb2 "ISG电机2温度反馈";
+CM_ SG_ 1032 IsgMcuTFb2 "ISG电机控制器2温度反馈";
+CM_ SG_ 1032 FuQntyFb2 "燃油量反馈2";
+CM_ SG_ 1029 MotFlTFb "左电机温度反馈";
+CM_ SG_ 1029 MotFrTFb "右电机温度反馈";
+CM_ SG_ 1029 MotFlIgbtTFb "左电机控制器温度反馈";
+CM_ SG_ 1029 MotFrIgbtTFb "右电机控制器温度反馈";
+CM_ SG_ 1030 AgRollFb "滚动角反馈";
+CM_ SG_ 1030 AgPitchFb "俯仰角反馈";
+CM_ SG_ 1030 AgHeadingFb "航向角反馈";
+CM_ SG_ 1031 ParkModFb "驻车状态 
+0:未驻车
+1:驻车";
+CM_ SG_ 1031 LeBattStsFb "左侧动力电池状态 
+0:不可用
+1:可用";
+CM_ SG_ 1031 RiBattStsFb "右侧动力电池状态 
+0:不可用
+1:可用";
+CM_ SG_ 1031 PwrLocnFb "能量源位置反馈 
+0:默认
+1:左侧
+2:右侧";
+CM_ SG_ 1031 MaiCtrlrLocnFb "主控制器位置反馈 
+0:左侧
+1:右侧";
+CM_ SG_ 1031 LeLampCtrl "左侧指示灯控制 
+0:关
+1:开";
+CM_ SG_ 1031 RiLampCtrl "右侧指示灯控制 
+0:关
+1:开";
+CM_ SG_ 1073 ComLvOnFb "低压上电反馈 
+0:失败
+1:成功";
+CM_ SG_ 1073 ComHvOnFb "高压上电反馈 
+0:失败
+1:成功";
+CM_ SG_ 1073 ComPwrModFb "动力模式反馈 
+0:纯电模式
+1:混动模式
+2:值守模式
+3:预留";
+CM_ SG_ 1073 ComPwrExchStsFb "能量源切换状态反馈 
+0:未切换
+1:正在切换
+2.切换成功
+3.切换失败";
+CM_ SG_ 1073 ComEmgyStopOnFb "急停反馈 
+0:未使能
+1:使能";
+CM_ SG_ 1073 ComOperModFb "操控模式反馈 
+0:手操
+1:远程
+2:自主
+3:无效";
+CM_ SG_ 1073 ComVehRdyFb "整车Ready反馈 
+0:未使能
+1:使能";
+CM_ SG_ 1073 ComBarrModFb "越障模式反馈 
+0:关
+1:开";
+CM_ SG_ 1073 ComParkModFb "驻车状态 
+0:未驻车
+1:驻车";
+CM_ SG_ 1073 ComLeBattStsFb "左侧动力电池状态 
+0:不可用
+1:可用";
+CM_ SG_ 1073 ComRiBattStsFb "右侧动力电池状态 
+0:不可用
+1:可用";
+CM_ SG_ 1073 ComPullWireModFb "拉线模式反馈 
+0:关
+1:开";
+CM_ SG_ 1073 ComPwrLocnFb "能量源位置反馈 
+0:默认
+1:左侧
+2:右侧";
+CM_ SG_ 1073 ComMaiCtrlrLocnFb "主控制器位置反馈 
+0:左侧
+1:右侧";
+CM_ SG_ 1073 ComBatt1SocFb "动力电池SOC反馈";
+CM_ SG_ 1073 ComBatt1VltgFb "动力电池电压反馈";
+CM_ SG_ 1073 ComBatt1MaxTFb "电池最高温度反馈";
+CM_ SG_ 1073 ComVehVFb "车速反馈";
+CM_ SG_ 1073 ComEquipModFb "单装模式反馈 
+0:运输
+1:侦查
+2:打击
+3:支援
+4:救援
+5:其他";
+CM_ SG_ 1074 ComVcuErrNrFb "整车故障码反馈";
+CM_ SG_ 1074 ComImuSysCalModSts "惯导对准状态 
+0:准备
+1:粗对准
+2:精对准
+3:对准好";
+CM_ SG_ 1074 ComPtfmTypFb "平台组成类型反馈 
+0:A+B
+1:B+A
+2:A+A
+3:B+B
+4:预留";
+CM_ SG_ 1074 ComGearFb "档位反馈 
+0:P
+1:D
+2:N
+3:R";
+CM_ SG_ 1074 ComBatt2SocFb "动力电池2SOC反馈";
+CM_ SG_ 1074 ComBatt2VltgFb "动力电池2电压反馈";
+CM_ SG_ 1074 ComBatt2MaxTFb "电池2最高温度反馈";
+CM_ SG_ 1075 ComTotVygFb "总里程反馈";
+CM_ SG_ 1075 ComLfPFb "左行车制动压力反馈";
+CM_ SG_ 1075 ComRfPFb "右行车制动压力反馈";
+CM_ SG_ 1076 ComEngSpdFb1 "发动机1转速反馈";
+CM_ SG_ 1076 ComEngCooltTFb1 "发动机1水温反馈";
+CM_ SG_ 1076 ComIsgPwrOutFb1 "发电功率反馈1";
+CM_ SG_ 1076 ComIsgMotTFb1 "ISG电机1温度反馈";
+CM_ SG_ 1076 ComIsgMcuTFb1 "ISG电机控制器1温度反馈";
+CM_ SG_ 1076 ComFuQntyFb1 "燃油量反馈1";
+CM_ SG_ 1079 ComEngSpdFb2 "发动机2转速反馈";
+CM_ SG_ 1079 ComEngCooltTFb2 "发动机2水温反馈";
+CM_ SG_ 1079 ComIsgPwrOutFb2 "发电功率反馈2";
+CM_ SG_ 1079 ComIsgMotTFb2 "ISG电机2温度反馈";
+CM_ SG_ 1079 ComIsgMcuTFb2 "ISG电机控制器2温度反馈";
+CM_ SG_ 1079 ComFuQntyFb2 "燃油量反馈2";
+CM_ SG_ 1077 ComMotFlTFb "左电机温度反馈";
+CM_ SG_ 1077 ComMotFrTFb "右电机温度反馈";
+CM_ SG_ 1077 ComMotFlIgbtTFb "左电机控制器温度反馈";
+CM_ SG_ 1077 ComMotFrIgbtTFb "右电机控制器温度反馈";
+CM_ SG_ 1078 ComAgRollFb "滚动角反馈";
+CM_ SG_ 1078 ComAgPitchFb "俯仰角反馈";
+CM_ SG_ 1078 ComAgHeadingFb "航向角反馈";
+CM_ SG_ 1313 VcuErrNrCycFb "故障码";
+CM_ SG_ 1313 VcuErrTotFb "故障数量";
+CM_ SG_ 1057 ComWirelsConn "连接信号 
+0:未使能
+1:使能";
+CM_ SG_ 1057 ComEmgyStopOnSet "急停 
+0:未急停
+1:急停";
+CM_ SG_ 1057 ComKeySet "钥匙档 
+0:Off档
+1:ACC档
+2:ON档";
+CM_ SG_ 1057 ComStrSet "可行驶使能 
+0:未使能
+1:使能";
+CM_ SG_ 1057 ComPrkBrkOn "驻车制动 
+0:未使能
+1:使能";
+CM_ SG_ 1057 ComPwrModSet "动力模式 
+0:纯电模式
+1:陆上（混动）模式";
+CM_ SG_ 1057 ComPwrLocnSet "能量源位置设置 
+0:默认
+1:左侧
+2:右侧";
+CM_ SG_ 1057 ComCenterSteerSet "中心转向 
+0:未使能
+1:使能";
+CM_ SG_ 1057 ComBarrModSet "越障模式 
+0:关
+1:开";
+CM_ SG_ 1057 ComEquipmentPwr "上装供电 
+0:关闭
+1:开启";
+CM_ SG_ 1057 ComOperModSet "操控模式 
+0:手操
+1:远程
+2:自主";
+CM_ SG_ 1057 ComLampSet "大灯开关 
+0:关闭
+1:大灯打开";
+CM_ SG_ 1057 ComReLiSet "尾灯控制 
+0:关闭
+1:示廓灯
+2:警示灯
+3:预留";
+CM_ SG_ 1057 ComSteerLamp "转向灯 
+0:关闭
+1:左转灯
+2:右转灯";
+CM_ SG_ 1057 ComSpdLvl "速度档位 
+0:低速
+1:高速";
+CM_ SG_ 1057 ComPullWireMod "拉线模式 
+0:未使能
+1:使能";
+CM_ SG_ 1057 ComHornSet "喇叭 
+0:关闭
+1:打开";
+CM_ SG_ 1057 Cntr421 "心跳信号";
+CM_ SG_ 1058 ComDrvLvrPosn "驱动摇杆";
+CM_ SG_ 1058 ComSteerLvrPosn "转向摇杆";
+CM_ SG_ 1058 ComBrkLvrPosn "制动摇杆";
+CM_ SG_ 1058 ComEquipMod "单装模式 
+0:运输
+1:侦查
+2:打击
+3:支援
+4:救援
+5:其他";
+CM_ SG_ 1058 Cntr422 "心跳信号";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 2 50000;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "CAN4";
+BA_ "GenMsgCycleTime" BO_ 1280 10;
+BA_ "GenMsgCycleTime" BO_ 1283 10;
+BA_ "GenMsgCycleTime" BO_ 1284 10;
+BA_ "GenMsgCycleTime" BO_ 1285 10;
+BA_ "GenMsgCycleTime" BO_ 1286 10;
+BA_ "GenMsgCycleTime" BO_ 1287 10;
+BA_ "GenMsgCycleTime" BO_ 1288 200;
+BA_ "GenMsgCycleTime" BO_ 1289 200;
+BA_ "GenMsgCycleTime" BO_ 1290 200;
+BA_ "GenMsgCycleTime" BO_ 1291 1000;
+BA_ "GenMsgCycleTime" BO_ 1292 200;
+BA_ "GenMsgCycleTime" BO_ 1293 10;
+BA_ "GenMsgCycleTime" BO_ 1294 10;
+BA_ "GenMsgCycleTime" BO_ 328 20;
+BA_ "GenMsgCycleTime" BO_ 329 20;
+BA_ "GenMsgCycleTime" BO_ 769 10;
+BA_ "GenMsgCycleTime" BO_ 1281 100;
+BA_ "GenMsgCycleTime" BO_ 1282 100;
+BA_ "GenMsgCycleTime" BO_ 321 20;
+BA_ "GenMsgCycleTime" BO_ 1025 100;
+BA_ "GenMsgCycleTime" BO_ 1026 100;
+BA_ "GenMsgCycleTime" BO_ 1027 100;
+BA_ "GenMsgCycleTime" BO_ 1028 100;
+BA_ "GenMsgCycleTime" BO_ 1032 100;
+BA_ "GenMsgCycleTime" BO_ 1029 100;
+BA_ "GenMsgCycleTime" BO_ 1030 100;
+BA_ "GenMsgCycleTime" BO_ 1031 100;
+BA_ "GenMsgCycleTime" BO_ 1073 20;
+BA_ "GenMsgCycleTime" BO_ 1074 20;
+BA_ "GenMsgCycleTime" BO_ 1075 20;
+BA_ "GenMsgCycleTime" BO_ 1076 20;
+BA_ "GenMsgCycleTime" BO_ 1079 20;
+BA_ "GenMsgCycleTime" BO_ 1077 20;
+BA_ "GenMsgCycleTime" BO_ 1078 20;
+BA_ "GenMsgCycleTime" BO_ 1313 10;
+BA_ "GenMsgCycleTime" BO_ 1057 20;
+BA_ "GenMsgCycleTime" BO_ 1058 20;
+VAL_ 1286 InsStFlg 0 "NONE" 1 "姿态初始化（航向未初始化）" 2 "组合导航" ;
+VAL_ 328 AutSteerModReq 0 "行驶转向" 1 "中心转向" ;
+VAL_ 328 GearPosnReq 0 "P" 1 "D" 2 "N（预留）" 3 "R" ;
+VAL_ 328 MdcHdLampSet 0 "未使能" 1 "使能" ;
+VAL_ 328 TurnLeftLampReq 0 "未使能" 1 "使能" ;
+VAL_ 328 TurnRightLampReq 0 "未使能" 1 "使能" ;
+VAL_ 328 WarnLampReq 0 "未使能" 1 "使能" ;
+VAL_ 328 TrumpReqReq 0 "关闭" 1 "打开" ;
+VAL_ 328 AutoDrvAllw 0 "不允许" 1 "允许" ;
+VAL_ 329 EmgBrkReq 0 "未使能" 1 "使能" ;
+VAL_ 329 PtModReq 0 "纯电" 1 "混动" ;
+VAL_ 329 MdcPrkgBrkSet 0 "未使能" 1 "使能" ;
+VAL_ 1281 WirelsConn 0 "未使能" 1 "使能" ;
+VAL_ 1281 EmgyStopOnSet 0 "未急停" 1 "急停" ;
+VAL_ 1281 KeySet 0 "Off档" 1 "ACC档" 2 "ON档" ;
+VAL_ 1281 StrSet 0 "未使能" 1 "使能" ;
+VAL_ 1281 PrkBrkOn 0 "未使能" 1 "使能" ;
+VAL_ 1281 PwrModSet 0 "纯电模式" 1 "陆上（混动）模式" ;
+VAL_ 1281 PwrLocnSet 0 "默认" 1 "左侧" 2 "右侧" ;
+VAL_ 1281 CenterSteerSet 0 "未使能" 1 "使能" ;
+VAL_ 1281 BarrModSet 0 "关" 1 "开" ;
+VAL_ 1281 EquipmentPwr 0 "关闭" 1 "开启" ;
+VAL_ 1281 OperModSet 0 "手操" 1 "远程" 2 "自主" ;
+VAL_ 1281 LampSet 0 "关闭" 1 "大灯打开" ;
+VAL_ 1281 ReLiSet 0 "关闭" 1 "示廓灯" 2 "警示灯" 3 "预留" ;
+VAL_ 1281 SteerLamp 0 "关闭" 1 "左转灯" 2 "右转灯" ;
+VAL_ 1281 SpdLvl 0 "低速" 1 "高速" ;
+VAL_ 1281 PullWireMod 0 "未使能" 1 "使能" ;
+VAL_ 1281 HornSet 0 "关闭" 1 "打开" ;
+VAL_ 1282 EquipMod 0 "运输" 1 "侦查" 2 "打击" 3 "支援" 4 "救援" 5 "其他" ;
+VAL_ 1282 Resd1 0 "未使能" 1 "使能" ;
+VAL_ 1282 Resd2 0 "未使能" 1 "使能" ;
+VAL_ 1282 Resd3 0 "未使能" 1 "使能" ;
+VAL_ 1282 Resd4 0 "未使能" 1 "使能" ;
+VAL_ 1282 Resd5 0 "未使能" 1 "使能" ;
+VAL_ 1282 Resd6 0 "未使能" 1 "使能" ;
+VAL_ 321 EmgBrkStsFb 0 "未使能" 1 "使能" ;
+VAL_ 321 SteerModStsFb 0 "行驶转向" 1 "中心转向" ;
+VAL_ 321 MdcVehRdyFb 0 "未使能" 1 "使能" ;
+VAL_ 321 ActvGearPosnFb 0 "P" 1 "D" 2 "N（预留）" 3 "R" ;
+VAL_ 321 VcuEngStsFb 0 "未启动" 1 "启动" ;
+VAL_ 321 VcuDrvModFb 0 "手操器遥控" 1 "远程遥控" 2 "自主驾驶" ;
+VAL_ 321 VcuFltRankFb 1 "一级警告，VCU不做处理" 2 "二级限制（对车速、扭矩等）" 3 "三级VCU退出可行驶或整车下电或紧急停车" ;
+VAL_ 1025 LvOnFb 0 "失败" 1 "成功" ;
+VAL_ 1025 HvOnFb 0 "失败" 1 "成功" ;
+VAL_ 1025 BarrModFb 0 "关" 1 "开" ;
+VAL_ 1025 PwrModFb 0 "纯电模式" 1 "混动模式" 2 "值守模式" 3 "预留" ;
+VAL_ 1025 PwrExchStsFb 0 "未切换" 1 "正在切换" ;
+VAL_ 1025 EmgyStopOnFb 0 "未使能" 1 "使能" ;
+VAL_ 1025 VehRdyFb 0 "未使能" 1 "使能" ;
+VAL_ 1025 PullWireModFb 0 "关" 1 "开" ;
+VAL_ 1025 OperModFb 0 "手操" 1 "远程" 2 "自主" 3 "无效" ;
+VAL_ 1025 EquipModFb 0 "运输" 1 "侦查" 2 "打击" 3 "支援" 4 "救援" 5 "其他" ;
+VAL_ 1026 ImuSysCalModSts 0 "准备" 1 "粗对准" 2 "精对准" 3 "对准好" ;
+VAL_ 1026 PtfmTypFb 0 "A+B" 1 "B+A" 2 "A+A" 3 "B+B" 4 "预留" ;
+VAL_ 1026 GearFb 0 "P" 1 "D" 2 "N" 3 "R" ;
+VAL_ 1031 ParkModFb 0 "未驻车" 1 "驻车" ;
+VAL_ 1031 LeBattStsFb 0 "不可用" 1 "可用" ;
+VAL_ 1031 RiBattStsFb 0 "不可用" 1 "可用" ;
+VAL_ 1031 PwrLocnFb 0 "默认" 1 "左侧" 2 "右侧" ;
+VAL_ 1031 MaiCtrlrLocnFb 0 "左侧" 1 "右侧" ;
+VAL_ 1031 LeLampCtrl 0 "关" 1 "开" ;
+VAL_ 1031 RiLampCtrl 0 "关" 1 "开" ;
+VAL_ 1073 ComLvOnFb 0 "失败" 1 "成功" ;
+VAL_ 1073 ComHvOnFb 0 "失败" 1 "成功" ;
+VAL_ 1073 ComPwrModFb 0 "纯电模式" 1 "混动模式" 2 "值守模式" 3 "预留" ;
+VAL_ 1073 ComPwrExchStsFb 0 "未切换" 1 "正在切换" ;
+VAL_ 1073 ComEmgyStopOnFb 0 "未使能" 1 "使能" ;
+VAL_ 1073 ComOperModFb 0 "手操" 1 "远程" 2 "自主" 3 "无效" ;
+VAL_ 1073 ComVehRdyFb 0 "未使能" 1 "使能" ;
+VAL_ 1073 ComBarrModFb 0 "关" 1 "开" ;
+VAL_ 1073 ComParkModFb 0 "未驻车" 1 "驻车" ;
+VAL_ 1073 ComLeBattStsFb 0 "不可用" 1 "可用" ;
+VAL_ 1073 ComRiBattStsFb 0 "不可用" 1 "可用" ;
+VAL_ 1073 ComPullWireModFb 0 "关" 1 "开" ;
+VAL_ 1073 ComPwrLocnFb 0 "默认" 1 "左侧" 2 "右侧" ;
+VAL_ 1073 ComMaiCtrlrLocnFb 0 "左侧" 1 "右侧" ;
+VAL_ 1073 ComEquipModFb 0 "运输" 1 "侦查" 2 "打击" 3 "支援" 4 "救援" 5 "其他" ;
+VAL_ 1074 ComImuSysCalModSts 0 "准备" 1 "粗对准" 2 "精对准" 3 "对准好" ;
+VAL_ 1074 ComPtfmTypFb 0 "A+B" 1 "B+A" 2 "A+A" 3 "B+B" 4 "预留" ;
+VAL_ 1074 ComGearFb 0 "P" 1 "D" 2 "N" 3 "R" ;
+VAL_ 1057 ComWirelsConn 0 "未使能" 1 "使能" ;
+VAL_ 1057 ComEmgyStopOnSet 0 "未急停" 1 "急停" ;
+VAL_ 1057 ComKeySet 0 "Off档" 1 "ACC档" 2 "ON档" ;
+VAL_ 1057 ComStrSet 0 "未使能" 1 "使能" ;
+VAL_ 1057 ComPrkBrkOn 0 "未使能" 1 "使能" ;
+VAL_ 1057 ComPwrModSet 0 "纯电模式" 1 "陆上（混动）模式" ;
+VAL_ 1057 ComPwrLocnSet 0 "默认" 1 "左侧" 2 "右侧" ;
+VAL_ 1057 ComCenterSteerSet 0 "未使能" 1 "使能" ;
+VAL_ 1057 ComBarrModSet 0 "关" 1 "开" ;
+VAL_ 1057 ComEquipmentPwr 0 "关闭" 1 "开启" ;
+VAL_ 1057 ComOperModSet 0 "手操" 1 "远程" 2 "自主" ;
+VAL_ 1057 ComLampSet 0 "关闭" 1 "大灯打开" ;
+VAL_ 1057 ComReLiSet 0 "关闭" 1 "示廓灯" 2 "警示灯" 3 "预留" ;
+VAL_ 1057 ComSteerLamp 0 "关闭" 1 "左转灯" 2 "右转灯" ;
+VAL_ 1057 ComSpdLvl 0 "低速" 1 "高速" ;
+VAL_ 1057 ComPullWireMod 0 "未使能" 1 "使能" ;
+VAL_ 1057 ComHornSet 0 "关闭" 1 "打开" ;
+VAL_ 1058 ComEquipMod 0 "运输" 1 "侦查" 2 "打击" 3 "支援" 4 "救援" 5 "其他" ;
+

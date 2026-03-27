@@ -4,7 +4,19 @@
 #define __DevCAN_Message_Type_H
 
 typedef unsigned char uint8;
+typedef unsigned short int uint16;
+typedef unsigned long uint32;
 typedef unsigned long long uint64;
+
+typedef signed char sint8;
+typedef signed short int sint16;
+typedef signed long sint32;
+typedef signed long long sint64;
+
+typedef float float32;
+typedef double float64;
+
+typedef uint8 boolean;
 
 typedef union{
     uint8 Buffer[8];
@@ -15,7 +27,7 @@ typedef union{
         uint64 CmdPwmDutyW :10;		/* Unit is:% */ 
         uint64 CmdPwmFreq :16;		/* Unit is:Hz */ 
         uint64 CmdPwmOutEn :1;
-        uint64 UnUsed0:7;
+        uint64 UnUsed0	:7;
     }S;
 }MessageType_DevPC_MCU_0x061;
 
@@ -27,7 +39,7 @@ typedef union{
         uint64 AdcValTPcbW :12;
         uint64 AdcValTPmic :12;
         uint64 AdcValTEtherCat :12;
-        uint64 UnUsed0:4;
+        uint64 UnUsed0	:4;
     }S;
 }MessageType_MCU_DevPC_0x081;
 
@@ -39,7 +51,7 @@ typedef union{
         uint64 AdcValGate15V :12;
         uint64 AdcValV24V :12;
         uint64 AdcValV15V :12;
-        uint64 UnUsed0:4;
+        uint64 UnUsed0	:4;
     }S;
 }MessageType_MCU_DevPC_0x082;
 
@@ -51,7 +63,7 @@ typedef union{
         uint64 AdcValCompOCW :12;
         uint64 AdcValCompOVBUS :12;
         uint64 AdcValCompUVBUS :12;
-        uint64 UnUsed0:1;
+        uint64 UnUsed0	:1;
         uint64 PhyValCompOCU :1;
         uint64 PhyValCompOCV :1;
         uint64 PhyValCompOCW :1;
@@ -66,7 +78,7 @@ typedef union{
         uint64 AdcValCurrentW :12;
         uint64 AdcValVoltageBUS :12;
         uint64 AdcValTMotor :12;
-        uint64 UnUsed0:4;
+        uint64 UnUsed0	:4;
     }S;
 }MessageType_MCU_DevPC_0x084;
 
@@ -108,7 +120,7 @@ typedef union{
         uint64 PhyValGate15V :14;		/* Unit is:V */ 
         uint64 PhyValV15V :14;		/* Unit is:V */ 
         uint64 PhyValV24V :14;		/* Unit is:V */ 
-        uint64 UnUsed0:2;
+        uint64 UnUsed0	:2;
     }S;
 }MessageType_MCU_DevPC_0x088;
 

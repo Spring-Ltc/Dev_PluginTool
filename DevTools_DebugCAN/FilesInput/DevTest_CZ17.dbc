@@ -1,0 +1,128 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DevPC MCU
+
+BO_ 97 DevPC_MCU_0x061: 8 DevPC
+ SG_ CmdPwmDeadTime : 0|10@1+ (0.01,0) [0|10.23] "us"  MCU
+ SG_ CmdPwmDutyU : 10|10@1+ (0.1,0) [0|102.3] "%"  MCU
+ SG_ CmdPwmDutyV : 20|10@1+ (0.1,0) [0|102.3] "%"  MCU
+ SG_ CmdPwmDutyW : 30|10@1+ (0.1,0) [0|102.3] "%"  MCU
+ SG_ CmdPwmFreq : 40|16@1+ (1,0) [0|65535] "Hz"  MCU
+ SG_ CmdPwmOutEn : 56|1@1+ (1,0) [0|1] ""  MCU
+
+
+
+BO_ 129 MCU_DevPC_0x081: 8 MCU
+ SG_ AdcValTPcbU : 0|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValTPcbV : 12|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValTPcbW : 24|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValTPmic : 36|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValTEtherCat : 48|12@1+ (1,0) [0|4095] ""  DevPC
+
+BO_ 130 MCU_DevPC_0x082: 8 MCU
+ SG_ AdcValVersionBrd : 0|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValIref2V5 : 12|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValGate15V : 24|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValV24V : 36|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValV15V : 48|12@1+ (1,0) [0|4095] ""  DevPC
+
+BO_ 131 MCU_DevPC_0x083: 8 MCU
+ SG_ AdcValCompOCU : 0|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValCompOCV : 12|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValCompOCW : 24|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValCompOVBUS : 36|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValCompUVBUS : 48|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ PhyValCompOCU : 61|1@1+ (1,0) [0|1] ""  DevPC
+ SG_ PhyValCompOCV : 62|1@1+ (1,0) [0|1] ""  DevPC
+ SG_ PhyValCompOCW : 63|1@1+ (1,0) [0|1] ""  DevPC
+
+BO_ 132 MCU_DevPC_0x084: 8 MCU
+ SG_ AdcValCurrentU : 0|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValCurrentV : 12|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValCurrentW : 24|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValVoltageBUS : 36|12@1+ (1,0) [0|4095] ""  DevPC
+ SG_ AdcValTMotor : 48|12@1+ (1,0) [0|4095] ""  DevPC
+
+BO_ 133 MCU_DevPC_0x085: 8 MCU
+ SG_ PhyValTPcbU : 0|21@1+ (0.1,0) [0|209715.1] "ohm"  DevPC
+ SG_ PhyValTPcbV : 21|21@1+ (0.1,0) [0|209715.1] "ohm"  DevPC
+ SG_ PhyValTPcbW : 42|21@1+ (0.1,0) [0|209715.1] "ohm"  DevPC
+ SG_ PhyValCompOVBUS : 63|1@1+ (1,0) [0|1] ""  DevPC
+
+BO_ 134 MCU_DevPC_0x086: 8 MCU
+ SG_ PhyValTMotor : 0|21@1+ (0.1,0) [0|209715.1] "ohm"  DevPC
+ SG_ PhyValTPmic : 21|21@1+ (0.1,0) [0|209715.1] "ohm"  DevPC
+ SG_ PhyValTEtherCat : 42|21@1+ (0.1,0) [0|209715.1] "ohm"  DevPC
+ SG_ PhyValCompUVBUS : 63|1@1+ (1,0) [0|1] ""  DevPC
+
+BO_ 135 MCU_DevPC_0x087: 8 MCU
+ SG_ PhyValVoltageBUS : 0|16@1+ (0.01,0) [0|655.35] "V"  DevPC
+ SG_ PhyValCurrentU : 16|16@1+ (0.01,-300) [-300|355.35] "A"  DevPC
+ SG_ PhyValCurrentV : 32|16@1+ (0.01,-300) [-300|355.35] "A"  DevPC
+ SG_ PhyValCurrentW : 48|16@1+ (0.01,-300) [-300|355.35] "A"  DevPC
+
+BO_ 136 MCU_DevPC_0x088: 8 MCU
+ SG_ PhyValIref2V5 : 0|10@1+ (0.01,0) [0|10.23] "V"  DevPC
+ SG_ PhyValVoltageVerBrd : 10|10@1+ (0.01,0) [0|10.23] "V"  DevPC
+ SG_ PhyValGate15V : 20|14@1+ (0.01,0) [0|40.95] "V"  DevPC
+ SG_ PhyValV15V : 34|14@1+ (0.01,0) [0|40.95] "V"  DevPC
+ SG_ PhyValV24V : 48|14@1+ (0.01,0) [0|163.83] "V"  DevPC
+
+
+
+
+
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 129 50;
+BA_ "GenMsgCycleTime" BO_ 130 100;
+BA_ "GenMsgCycleTime" BO_ 131 50;
+BA_ "GenMsgCycleTime" BO_ 132 100;
+BA_ "GenMsgCycleTime" BO_ 133 50;
+BA_ "GenMsgCycleTime" BO_ 134 100;
+BA_ "GenMsgCycleTime" BO_ 135 50;
+BA_ "GenMsgCycleTime" BO_ 136 100;
+BA_ "GenMsgCycleTime" BO_ 97 50;
+BA_ "GenSigStartValue" SG_ 97 CmdPwmDeadTime 100;
+BA_ "GenSigStartValue" SG_ 97 CmdPwmDutyU 500;
+BA_ "GenSigStartValue" SG_ 97 CmdPwmDutyV 500;
+BA_ "GenSigStartValue" SG_ 97 CmdPwmDutyW 500;
+BA_ "GenSigStartValue" SG_ 97 CmdPwmFreq 10000;
+

@@ -21,119 +21,108 @@ typedef uint8 boolean;
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValTMotor :16;
-        uint64 VoltageTMotor :16;		/* Unit is:mV */ 
-        uint64 PhyValTMotor :32;		/* Unit is:ohm */ 
+        uint64 CmdPwmDeadTime :10;		/* Unit is:us */ 
+        uint64 CmdPwmDutyU :10;		/* Unit is:% */ 
+        uint64 CmdPwmDutyV :10;		/* Unit is:% */ 
+        uint64 CmdPwmDutyW :10;		/* Unit is:% */ 
+        uint64 CmdPwmFreq :16;		/* Unit is:Hz */ 
+        uint64 CmdPwmOutEn :1;
+        uint64 UnUsed0	:7;
     }S;
-}MessageType_MCU_DevPC_0x050;
+}MessageType_DevPC_MCU_0x061;
 
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValTPcb :16;
-        uint64 VoltageTPcb :16;		/* Unit is:mV */ 
-        uint64 PhyValTPcb :32;		/* Unit is:ohm */ 
+        uint64 AdcValTPcbU :12;
+        uint64 AdcValTPcbV :12;
+        uint64 AdcValTPcbW :12;
+        uint64 AdcValTPmic :12;
+        uint64 AdcValTEtherCat :12;
+        uint64 UnUsed0	:4;
     }S;
-}MessageType_MCU_DevPC_0x051;
+}MessageType_MCU_DevPC_0x081;
 
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValTEth :16;
-        uint64 VoltageTEth :16;		/* Unit is:mV */ 
-        uint64 PhyValTEth :32;		/* Unit is:ohm */ 
+        uint64 AdcValVersionBrd :12;
+        uint64 AdcValIref2V5 :12;
+        uint64 AdcValGate15V :12;
+        uint64 AdcValV24V :12;
+        uint64 AdcValV15V :12;
+        uint64 UnUsed0	:4;
     }S;
-}MessageType_MCU_DevPC_0x052;
+}MessageType_MCU_DevPC_0x082;
 
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValCurrentU1 :16;
-        uint64 VoltageCurrentU1 :16;		/* Unit is:mV */ 
-        uint64 PhyValCurrentU1 :32;		/* Unit is:A */ 
+        uint64 AdcValCompOCU :12;
+        uint64 AdcValCompOCV :12;
+        uint64 AdcValCompOCW :12;
+        uint64 AdcValCompOVBUS :12;
+        uint64 AdcValCompUVBUS :12;
+        uint64 UnUsed0	:1;
+        uint64 PhyValCompOCU :1;
+        uint64 PhyValCompOCV :1;
+        uint64 PhyValCompOCW :1;
     }S;
-}MessageType_MCU_DevPC_0x053;
+}MessageType_MCU_DevPC_0x083;
 
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValCurrentV1 :16;
-        uint64 VoltageCurrentV1 :16;		/* Unit is:mV */ 
-        uint64 PhyValCurrentV1 :32;		/* Unit is:A */ 
+        uint64 AdcValCurrentU :12;
+        uint64 AdcValCurrentV :12;
+        uint64 AdcValCurrentW :12;
+        uint64 AdcValVoltageBUS :12;
+        uint64 AdcValTMotor :12;
+        uint64 UnUsed0	:4;
     }S;
-}MessageType_MCU_DevPC_0x054;
+}MessageType_MCU_DevPC_0x084;
 
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValCurrentW1 :16;
-        uint64 VoltageCurrentW1 :16;		/* Unit is:mV */ 
-        uint64 PhyValCurrentW1 :32;		/* Unit is:A */ 
+        uint64 PhyValTPcbU :21;		/* Unit is:ohm */ 
+        uint64 PhyValTPcbV :21;		/* Unit is:ohm */ 
+        uint64 PhyValTPcbW :21;		/* Unit is:ohm */ 
+        uint64 PhyValCompOVBUS :1;
     }S;
-}MessageType_MCU_DevPC_0x055;
+}MessageType_MCU_DevPC_0x085;
 
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValCurrentU2 :16;
-        uint64 VoltageCurrentU2 :16;		/* Unit is:mV */ 
-        uint64 PhyValCurrentU2 :32;		/* Unit is:A */ 
+        uint64 PhyValTMotor :21;		/* Unit is:ohm */ 
+        uint64 PhyValTPmic :21;		/* Unit is:ohm */ 
+        uint64 PhyValTEtherCat :21;		/* Unit is:ohm */ 
+        uint64 PhyValCompUVBUS :1;
     }S;
-}MessageType_MCU_DevPC_0x056;
+}MessageType_MCU_DevPC_0x086;
 
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValCurrentV2 :16;
-        uint64 VoltageCurrentV2 :16;		/* Unit is:mV */ 
-        uint64 PhyValCurrentV2 :32;		/* Unit is:A */ 
+        uint64 PhyValVoltageBUS :16;		/* Unit is:V */ 
+        uint64 PhyValCurrentU :16;		/* Unit is:A */ 
+        uint64 PhyValCurrentV :16;		/* Unit is:A */ 
+        uint64 PhyValCurrentW :16;		/* Unit is:A */ 
     }S;
-}MessageType_MCU_DevPC_0x057;
+}MessageType_MCU_DevPC_0x087;
 
 typedef union{
     uint8 Buffer[8];
     struct{
-        uint64 AdcValCurrentW2 :16;
-        uint64 VoltageCurrentW2 :16;		/* Unit is:mV */ 
-        uint64 PhyValCurrentW2 :32;		/* Unit is:A */ 
+        uint64 PhyValIref2V5 :10;		/* Unit is:V */ 
+        uint64 PhyValVoltageVerBrd :10;		/* Unit is:V */ 
+        uint64 PhyValGate15V :14;		/* Unit is:V */ 
+        uint64 PhyValV15V :14;		/* Unit is:V */ 
+        uint64 PhyValV24V :14;		/* Unit is:V */ 
+        uint64 UnUsed0	:2;
     }S;
-}MessageType_MCU_DevPC_0x058;
-
-typedef union{
-    uint8 Buffer[8];
-    struct{
-        uint64 AdcValBusLine :16;
-        uint64 VoltageBusLine :16;		/* Unit is:mV */ 
-        uint64 PhyValBusLine :32;		/* Unit is:V */ 
-    }S;
-}MessageType_MCU_DevPC_0x059;
-
-typedef union{
-    uint8 Buffer[8];
-    struct{
-        uint64 AdcValIref2V5 :16;
-        uint64 VoltageIref2V5 :16;		/* Unit is:mV */ 
-        uint64 PhyValIref2V5 :32;		/* Unit is:V */ 
-    }S;
-}MessageType_MCU_DevPC_0x05A;
-
-typedef union{
-    uint8 Buffer[8];
-    struct{
-        uint64 AdcValGate15V :16;
-        uint64 VoltageGate15V :16;		/* Unit is:mV */ 
-        uint64 PhyValGate15V :32;		/* Unit is:V */ 
-    }S;
-}MessageType_MCU_DevPC_0x05B;
-
-typedef union{
-    uint8 Buffer[8];
-    struct{
-        uint64 AdcVal15V :16;
-        uint64 Voltage15V :16;		/* Unit is:mV */ 
-        uint64 PhyVal15V :32;		/* Unit is:V */ 
-    }S;
-}MessageType_MCU_DevPC_0x05C;
+}MessageType_MCU_DevPC_0x088;
 
 #endif
 /* ==================DevCAN_Message_Type.h File End=========================== */

@@ -12,119 +12,113 @@ const DevCan_MailboxType DevCanMailboxTable[DEVCAN_MAILBOX_TX_NUM] = {
 };
 
 
+static void DevCan_Memcpy(const uint8 *Src,uint8 *Dest,uint8 Length)
+{
+	uint8 i;
+	for(i = 0; i < Length; i++)
+	{
+		Dest[i] = Src[i];
+	}
+}
+
+
 static void DevCan_GetTxPduInfo(uint16 Index,Can_PduType *TxPdu)
 {
 	switch(Index)
 	{
 		case 0:
 		{
-			Message_MCU_DevPC_0x050.S.AdcValTMotor  = s_AdcValTMotor;
-			Message_MCU_DevPC_0x050.S.VoltageTMotor  = s_VoltageTMotor;
-			Message_MCU_DevPC_0x050.S.PhyValTMotor  = s_PhyValTMotor/(0.01);
-			TxPdu->id = 0x050u;
-			TxPdu->sdu = Message_MCU_DevPC_0x050.Buffer;
+			Message_MCU_DevPC_0x081.S.AdcValTPcbU  = s_AdcValTPcbU;
+			Message_MCU_DevPC_0x081.S.AdcValTPcbV  = s_AdcValTPcbV;
+			Message_MCU_DevPC_0x081.S.AdcValTPcbW  = s_AdcValTPcbW;
+			Message_MCU_DevPC_0x081.S.AdcValTPmic  = s_AdcValTPmic;
+			Message_MCU_DevPC_0x081.S.AdcValTEtherCat  = s_AdcValTEtherCat;
+			TxPdu->id = 0x081u;
+			TxPdu->sdu = Message_MCU_DevPC_0x081.Buffer;
 		}break;
 		case 1:
 		{
-			Message_MCU_DevPC_0x051.S.AdcValTPcb  = s_AdcValTPcb;
-			Message_MCU_DevPC_0x051.S.VoltageTPcb  = s_VoltageTPcb;
-			Message_MCU_DevPC_0x051.S.PhyValTPcb  = s_PhyValTPcb/(0.01);
-			TxPdu->id = 0x051u;
-			TxPdu->sdu = Message_MCU_DevPC_0x051.Buffer;
+			Message_MCU_DevPC_0x082.S.AdcValVersionBrd  = s_AdcValVersionBrd;
+			Message_MCU_DevPC_0x082.S.AdcValIref2V5  = s_AdcValIref2V5;
+			Message_MCU_DevPC_0x082.S.AdcValGate15V  = s_AdcValGate15V;
+			Message_MCU_DevPC_0x082.S.AdcValV24V  = s_AdcValV24V;
+			Message_MCU_DevPC_0x082.S.AdcValV15V  = s_AdcValV15V;
+			TxPdu->id = 0x082u;
+			TxPdu->sdu = Message_MCU_DevPC_0x082.Buffer;
 		}break;
 		case 2:
 		{
-			Message_MCU_DevPC_0x052.S.AdcValTEth  = s_AdcValTEth;
-			Message_MCU_DevPC_0x052.S.VoltageTEth  = s_VoltageTEth;
-			Message_MCU_DevPC_0x052.S.PhyValTEth  = s_PhyValTEth/(0.01);
-			TxPdu->id = 0x052u;
-			TxPdu->sdu = Message_MCU_DevPC_0x052.Buffer;
+			Message_MCU_DevPC_0x083.S.AdcValCompOCU  = s_AdcValCompOCU;
+			Message_MCU_DevPC_0x083.S.AdcValCompOCV  = s_AdcValCompOCV;
+			Message_MCU_DevPC_0x083.S.AdcValCompOCW  = s_AdcValCompOCW;
+			Message_MCU_DevPC_0x083.S.AdcValCompOVBUS  = s_AdcValCompOVBUS;
+			Message_MCU_DevPC_0x083.S.AdcValCompUVBUS  = s_AdcValCompUVBUS;
+			Message_MCU_DevPC_0x083.S.PhyValCompOCU  = s_PhyValCompOCU;
+			Message_MCU_DevPC_0x083.S.PhyValCompOCV  = s_PhyValCompOCV;
+			Message_MCU_DevPC_0x083.S.PhyValCompOCW  = s_PhyValCompOCW;
+			TxPdu->id = 0x083u;
+			TxPdu->sdu = Message_MCU_DevPC_0x083.Buffer;
 		}break;
 		case 3:
 		{
-			Message_MCU_DevPC_0x053.S.AdcValCurrentU1  = s_AdcValCurrentU1;
-			Message_MCU_DevPC_0x053.S.VoltageCurrentU1  = s_VoltageCurrentU1;
-			Message_MCU_DevPC_0x053.S.PhyValCurrentU1  = (s_PhyValCurrentU1 - (-500))/(0.001);
-			TxPdu->id = 0x053u;
-			TxPdu->sdu = Message_MCU_DevPC_0x053.Buffer;
+			Message_MCU_DevPC_0x084.S.AdcValCurrentU  = s_AdcValCurrentU;
+			Message_MCU_DevPC_0x084.S.AdcValCurrentV  = s_AdcValCurrentV;
+			Message_MCU_DevPC_0x084.S.AdcValCurrentW  = s_AdcValCurrentW;
+			Message_MCU_DevPC_0x084.S.AdcValVoltageBUS  = s_AdcValVoltageBUS;
+			Message_MCU_DevPC_0x084.S.AdcValTMotor  = s_AdcValTMotor;
+			TxPdu->id = 0x084u;
+			TxPdu->sdu = Message_MCU_DevPC_0x084.Buffer;
 		}break;
 		case 4:
 		{
-			Message_MCU_DevPC_0x054.S.AdcValCurrentV1  = s_AdcValCurrentV1;
-			Message_MCU_DevPC_0x054.S.VoltageCurrentV1  = s_VoltageCurrentV1;
-			Message_MCU_DevPC_0x054.S.PhyValCurrentV1  = (s_PhyValCurrentV1 - (-500))/(0.001);
-			TxPdu->id = 0x054u;
-			TxPdu->sdu = Message_MCU_DevPC_0x054.Buffer;
+			Message_MCU_DevPC_0x085.S.PhyValTPcbU  = s_PhyValTPcbU/(0.1);
+			Message_MCU_DevPC_0x085.S.PhyValTPcbV  = s_PhyValTPcbV/(0.1);
+			Message_MCU_DevPC_0x085.S.PhyValTPcbW  = s_PhyValTPcbW/(0.1);
+			Message_MCU_DevPC_0x085.S.PhyValCompOVBUS  = s_PhyValCompOVBUS;
+			TxPdu->id = 0x085u;
+			TxPdu->sdu = Message_MCU_DevPC_0x085.Buffer;
 		}break;
 		case 5:
 		{
-			Message_MCU_DevPC_0x055.S.AdcValCurrentW1  = s_AdcValCurrentW1;
-			Message_MCU_DevPC_0x055.S.VoltageCurrentW1  = s_VoltageCurrentW1;
-			Message_MCU_DevPC_0x055.S.PhyValCurrentW1  = (s_PhyValCurrentW1 - (-500))/(0.001);
-			TxPdu->id = 0x055u;
-			TxPdu->sdu = Message_MCU_DevPC_0x055.Buffer;
+			Message_MCU_DevPC_0x086.S.PhyValTMotor  = s_PhyValTMotor/(0.1);
+			Message_MCU_DevPC_0x086.S.PhyValTPmic  = s_PhyValTPmic/(0.1);
+			Message_MCU_DevPC_0x086.S.PhyValTEtherCat  = s_PhyValTEtherCat/(0.1);
+			Message_MCU_DevPC_0x086.S.PhyValCompUVBUS  = s_PhyValCompUVBUS;
+			TxPdu->id = 0x086u;
+			TxPdu->sdu = Message_MCU_DevPC_0x086.Buffer;
 		}break;
 		case 6:
 		{
-			Message_MCU_DevPC_0x056.S.AdcValCurrentU2  = s_AdcValCurrentU2;
-			Message_MCU_DevPC_0x056.S.VoltageCurrentU2  = s_VoltageCurrentU2;
-			Message_MCU_DevPC_0x056.S.PhyValCurrentU2  = (s_PhyValCurrentU2 - (-500))/(0.001);
-			TxPdu->id = 0x056u;
-			TxPdu->sdu = Message_MCU_DevPC_0x056.Buffer;
+			Message_MCU_DevPC_0x087.S.PhyValVoltageBUS  = s_PhyValVoltageBUS/(0.01);
+			Message_MCU_DevPC_0x087.S.PhyValCurrentU  = (s_PhyValCurrentU - (-300))/(0.01);
+			Message_MCU_DevPC_0x087.S.PhyValCurrentV  = (s_PhyValCurrentV - (-300))/(0.01);
+			Message_MCU_DevPC_0x087.S.PhyValCurrentW  = (s_PhyValCurrentW - (-300))/(0.01);
+			TxPdu->id = 0x087u;
+			TxPdu->sdu = Message_MCU_DevPC_0x087.Buffer;
 		}break;
 		case 7:
 		{
-			Message_MCU_DevPC_0x057.S.AdcValCurrentV2  = s_AdcValCurrentV2;
-			Message_MCU_DevPC_0x057.S.VoltageCurrentV2  = s_VoltageCurrentV2;
-			Message_MCU_DevPC_0x057.S.PhyValCurrentV2  = (s_PhyValCurrentV2 - (-500))/(0.001);
-			TxPdu->id = 0x057u;
-			TxPdu->sdu = Message_MCU_DevPC_0x057.Buffer;
+			Message_MCU_DevPC_0x088.S.PhyValIref2V5  = s_PhyValIref2V5/(0.01);
+			Message_MCU_DevPC_0x088.S.PhyValVoltageVerBrd  = s_PhyValVoltageVerBrd/(0.01);
+			Message_MCU_DevPC_0x088.S.PhyValGate15V  = s_PhyValGate15V/(0.01);
+			Message_MCU_DevPC_0x088.S.PhyValV15V  = s_PhyValV15V/(0.01);
+			Message_MCU_DevPC_0x088.S.PhyValV24V  = s_PhyValV24V/(0.01);
+			TxPdu->id = 0x088u;
+			TxPdu->sdu = Message_MCU_DevPC_0x088.Buffer;
 		}break;
-		case 8:
+		case 0xFFFFu:
 		{
-			Message_MCU_DevPC_0x058.S.AdcValCurrentW2  = s_AdcValCurrentW2;
-			Message_MCU_DevPC_0x058.S.VoltageCurrentW2  = s_VoltageCurrentW2;
-			Message_MCU_DevPC_0x058.S.PhyValCurrentW2  = (s_PhyValCurrentW2 - (-500))/(0.001);
-			TxPdu->id = 0x058u;
-			TxPdu->sdu = Message_MCU_DevPC_0x058.Buffer;
+			/*do nothing*/
 		}break;
-		case 9:
+		default:
 		{
-			Message_MCU_DevPC_0x059.S.AdcValBusLine  = s_AdcValBusLine;
-			Message_MCU_DevPC_0x059.S.VoltageBusLine  = s_VoltageBusLine;
-			Message_MCU_DevPC_0x059.S.PhyValBusLine  = s_PhyValBusLine/(0.001);
-			TxPdu->id = 0x059u;
-			TxPdu->sdu = Message_MCU_DevPC_0x059.Buffer;
-		}break;
-		case 10:
-		{
-			Message_MCU_DevPC_0x05A.S.AdcValIref2V5  = s_AdcValIref2V5;
-			Message_MCU_DevPC_0x05A.S.VoltageIref2V5  = s_VoltageIref2V5;
-			Message_MCU_DevPC_0x05A.S.PhyValIref2V5  = s_PhyValIref2V5/(0.001);
-			TxPdu->id = 0x05au;
-			TxPdu->sdu = Message_MCU_DevPC_0x05A.Buffer;
-		}break;
-		case 11:
-		{
-			Message_MCU_DevPC_0x05B.S.AdcValGate15V  = s_AdcValGate15V;
-			Message_MCU_DevPC_0x05B.S.VoltageGate15V  = s_VoltageGate15V;
-			Message_MCU_DevPC_0x05B.S.PhyValGate15V  = s_PhyValGate15V/(0.001);
-			TxPdu->id = 0x05bu;
-			TxPdu->sdu = Message_MCU_DevPC_0x05B.Buffer;
-		}break;
-		case 12:
-		{
-			Message_MCU_DevPC_0x05C.S.AdcVal15V  = s_AdcVal15V;
-			Message_MCU_DevPC_0x05C.S.Voltage15V  = s_Voltage15V;
-			Message_MCU_DevPC_0x05C.S.PhyVal15V  = s_PhyVal15V/(0.001);
-			TxPdu->id = 0x05cu;
-			TxPdu->sdu = Message_MCU_DevPC_0x05C.Buffer;
+			/*do nothing*/
 		}break;
 	}
 }
 
 
-#define DEVCAN_MESSAGE_TX_NUM	(13u)
+#define DEVCAN_MESSAGE_TX_NUM	(8u)
 void DevCan_MainFunction_Tx(void)
 {
 	static uint16 MessageIndex = 0u;
@@ -138,6 +132,41 @@ void DevCan_MainFunction_Tx(void)
 		if(MessageIndex >= DEVCAN_MESSAGE_TX_NUM)
 			MessageIndex = 0u;
 	}
+}
+
+
+static void DevCan_SetRxPduInfo(Can_IdType RxCanId, uint8 RxLength, const uint8 *RxBuffer)
+{
+	switch(RxCanId)
+	{
+		case 0x061u:
+		{
+			DevCan_Memcpy(RxBuffer,Message_DevPC_MCU_0x061.Buffer,RxLength);
+			s_CmdPwmDeadTime = (float32)(Message_DevPC_MCU_0x061.S.CmdPwmDeadTime)*(0.01);
+			s_CmdPwmDutyU = (float32)(Message_DevPC_MCU_0x061.S.CmdPwmDutyU)*(0.1);
+			s_CmdPwmDutyV = (float32)(Message_DevPC_MCU_0x061.S.CmdPwmDutyV)*(0.1);
+			s_CmdPwmDutyW = (float32)(Message_DevPC_MCU_0x061.S.CmdPwmDutyW)*(0.1);
+			s_CmdPwmFreq = (uint16)(Message_DevPC_MCU_0x061.S.CmdPwmFreq);
+			s_CmdPwmOutEn = (Message_DevPC_MCU_0x061.S.CmdPwmOutEn);
+		}break;
+		case 0x7FFu:
+		{
+			/*do nothing*/
+		}break;
+		default:
+		{
+			/*do nothing*/
+		}break;
+	}
+}
+
+
+void CanIf_RxIndication_DevCan(const Can_HwType *Mailbox, const PduInfoType *PduInfoPtr)
+{
+	Can_IdType RxCanId = Mailbox->CanId;
+	uint8 RxLength = PduInfoPtr->SduLength;
+	uint8 *RxBuffer = PduInfoPtr->SduDataPtr;
+	DevCan_SetRxPduInfo(RxCanId, RxLength, RxBuffer);
 }
 
 

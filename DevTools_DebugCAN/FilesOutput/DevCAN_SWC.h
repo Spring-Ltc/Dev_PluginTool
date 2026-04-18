@@ -9,9 +9,8 @@
 
 typedef uint16 DevCan_MailboxType; /* USER_INTEGRATION_CONFIG_CONTENT */ 
 
-extern void DevCan_SWC_INPUT(void);
-extern void DevCan_SWC_OUTPUT(void);
 extern void DevCan_MainFunction_Tx(void);
+extern void CanIf_RxIndication_DevCan(const Can_HwType *Mailbox, const PduInfoType *PduInfoPtr);
 
 
 

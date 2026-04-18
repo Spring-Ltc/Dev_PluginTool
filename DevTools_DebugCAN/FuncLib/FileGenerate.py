@@ -161,6 +161,25 @@ def GenerateContent_PhysicalToSignal_By_SignalDict(Signal):
     Content += ";\n"
     return Content
 
+def GenerateContent_SignalToPhysical_By_SignalDict(Signal,SignalVal):
+    Content = ""
+    DataType = Variable_DataType_Calculate(Signal)
+    if DataType == "boolean":   #布尔类型，直接赋值
+        Content += SignalVal
+    else:
+        Content += "(" + DataType + ")" + SignalVal #强制类型转换
+        if Signal["Factor"] != "1":
+            Content += "*(" + Signal["Factor"] + ")"
+        if Signal["Offset"] != "0":
+            Content += " + (" + Signal["Offset"] + ")"
+    Content += ";\n"
+    return Content
+    
+
+
+
+
+
 
 
 
@@ -179,7 +198,20 @@ def GenerateContent_TxPduInfo_By_MessageDict(TxIndex,MessageDict):
 
 
 
+def GenerateContent_RxPduInfo_By_MessageDict(MessageDict):
+    DestAddress = "Message_" + MessageDict["MessageName"] + ".Buffer"
+    Content = "\t\tcase " + MessageDict["MessageId"] + "u:\n"
+    Content += "\t\t{\n"
 
+    #拷贝内存
+    Content += "\t\t\tDevCan_Memcpy(RxBuffer," + DestAddress + ",RxLength);\n"
+    SingalList = MessageDict["SignalInfoList"]
+    for Signal in SingalList:
+        Content += "\t\t\t" + "s_" + Signal["SignalName"].strip() + " = "
+        SignalVal = "(" + "Message_" + MessageDict["MessageName"] + ".S." + Signal["SignalName"].strip() + ")"
+        Content += GenerateContent_SignalToPhysical_By_SignalDict(Signal,SignalVal)
+    Content += "\t\t}break;\n"
+    return Content
 
 
 
@@ -251,12 +283,9 @@ def GenerateFile_SWC_By_MessageDictList(MessageDictList, FilePath):
     #     Content += "\n"
     Content += "typedef uint16 DevCan_MailboxType; /* USER_INTEGRATION_CONFIG_CONTENT */ \n\n"
 
-    Content += "extern void DevCan_SWC_INPUT(void);\n"
-    Content += "extern void DevCan_SWC_OUTPUT(void);\n"
 
     Content += "extern void DevCan_MainFunction_Tx(void);\n"
-
-
+    Content += "extern void CanIf_RxIndication_DevCan(const Can_HwType *Mailbox, const PduInfoType *PduInfoPtr);\n"
 
     Content += "\n\n\n\n#endif\n"
     Content += r"/* ==================DevCAN_SWC.h File End=========================== */"
@@ -291,9 +320,18 @@ def GenerateFile_SWC_By_MessageDictList(MessageDictList, FilePath):
 
     # Content += """void DevCan_SWC_INPUT(void)
     # {
-    
+
     
     # }
+
+    Content += "static void DevCan_Memcpy(const uint8 *Src,uint8 *Dest,uint8 Length)\n"
+    Content += "{\n"
+    Content += "\tuint8 i;\n"
+    Content += "\tfor(i = 0; i < Length; i++)\n"
+    Content += "\t{\n"
+    Content += "\t\tDest[i] = Src[i];\n"
+    Content += "\t}\n"
+    Content += "}\n\n\n"
 
     
     # void DevCan_SWC_OUTPUT(void)
@@ -312,6 +350,8 @@ def GenerateFile_SWC_By_MessageDictList(MessageDictList, FilePath):
         if MessageDict["MessageTxNode"] == "MCU":
             Content += GenerateContent_TxPduInfo_By_MessageDict(TxMessageCnt,MessageDict)
             TxMessageCnt += 1
+    Content += "\t\tcase 0xFFFFu:\n\t\t{\n\t\t\t/*do nothing*/\n\t\t}break;\n"
+    Content += "\t\tdefault:\n\t\t{\n\t\t\t/*do nothing*/\n\t\t}break;\n"
     Content += "\t}\n"
     Content += "}\n\n\n"
 
@@ -331,6 +371,35 @@ def GenerateFile_SWC_By_MessageDictList(MessageDictList, FilePath):
     Content += "\t\t\tMessageIndex = 0u;\n"
     Content += "\t}\n"
     Content += "}\n\n\n"
+
+
+
+
+    Content += "static void DevCan_SetRxPduInfo(Can_IdType RxCanId, uint8 RxLength, const uint8 *RxBuffer)\n"
+    Content += "{\n"
+    Content += "\tswitch(RxCanId)\n"
+    Content += "\t{\n"
+    for MessageDict in MessageDictList:
+        if MessageDict["MessageTxNode"] == "DevPC":
+            Content += GenerateContent_RxPduInfo_By_MessageDict(MessageDict)
+    Content += "\t\tcase 0x7FFu:\n\t\t{\n\t\t\t/*do nothing*/\n\t\t}break;\n"
+    Content += "\t\tdefault:\n\t\t{\n\t\t\t/*do nothing*/\n\t\t}break;\n"
+    Content += "\t}\n"
+    Content += "}\n\n\n"
+
+
+
+    Content += "void CanIf_RxIndication_DevCan(const Can_HwType *Mailbox, const PduInfoType *PduInfoPtr)\n"
+    Content += "{\n"
+    Content += "\tCan_IdType RxCanId = Mailbox->CanId;\n"
+    Content += "\tuint8 RxLength = PduInfoPtr->SduLength;\n"
+    Content += "\tuint8 *RxBuffer = PduInfoPtr->SduDataPtr;\n"
+
+    Content += "\tDevCan_SetRxPduInfo(RxCanId, RxLength, RxBuffer);\n"
+
+    Content += "}\n\n\n"
+
+
 
 
 

@@ -75,6 +75,10 @@ def GenerateFile_MessageTypeDef_By_MessageDictList(MessageDictList, FilePath):
     for MessageDict in MessageDictList:
         Content += GenerateContent_MessageTypeDef_By_MessigeDict(MessageDict) + "\n"
 
+
+
+
+
     Content += "#endif\n"
     Content += r"/* ==================DevCAN_Message_Type.h File End=========================== */"
     Content += "\n"
@@ -99,7 +103,7 @@ def Variable_DataType_Calculate(SignalDict):
         if Dec_Offset%1 != 0:
             DataType = "float32"
         else:
-            if Dec_Offset<0:    #�з���
+            if Dec_Offset<0:    #�з���
                 if Dec_Length >32:
                     DataType = "sint64"
                 elif Dec_Length >16:
@@ -108,7 +112,7 @@ def Variable_DataType_Calculate(SignalDict):
                     DataType = "sint16"
                 elif Dec_Length >1:
                     DataType = "sint8"
-            else:   #�޷���
+            else:   #�޷���
                 if Dec_Length >32:
                     DataType = "uint64"
                 elif Dec_Length >16:
@@ -140,6 +144,38 @@ def GenerateContent_SignalVariable_By_SignalList(SignalList,Prefix):
 
 
 
+def GenerateContent_PhysicalToSignal_By_SignalDict(Signal):
+    Content = Signal["SignalName"] + " = "
+    DataType = Variable_DataType_Calculate(Signal)
+    PhyVal = "s_" + Signal["SignalName"].strip()
+
+    if DataType == "boolean":   #布尔类型，直接赋值
+        Content += PhyVal
+    else:
+        if Signal["Offset"] != "0":
+            Content += "(" + PhyVal + " - (" + Signal["Offset"] + "))"
+        else:
+            Content += PhyVal
+        if Signal["Factor"] != "1":
+            Content += "/(" + Signal["Factor"] + ")"
+    Content += ";\n"
+    return Content
+
+
+
+
+
+def GenerateContent_TxPduInfo_By_MessageDict(TxIndex,MessageDict):
+    Content = "\t\tcase " + str(TxIndex) + ":\n"
+    Content += "\t\t{\n"
+    #这里插入 Tx信号Physical值到signal值的计算转换
+    SingalList = MessageDict["SignalInfoList"]
+    for Signal in SingalList:
+        Content += "\t\t\t" + "Message_" + MessageDict["MessageName"] + ".S." + GenerateContent_PhysicalToSignal_By_SignalDict(Signal)
+    Content += "\t\t\tTxPdu->id = " + MessageDict["MessageId"] + "u;\n"
+    Content += "\t\t\tTxPdu->sdu = Message_" + MessageDict["MessageName"] + ".Buffer;\n"
+    Content += "\t\t}break;\n"
+    return Content
 
 
 
@@ -164,6 +200,9 @@ def GenerateFile_MessageVariable_By_MessageDictList(MessageDictList, FilePath):
         Content += "extern MessageType_" + MessageDict["MessageName"] + " Message_" + MessageDict["MessageName"] + ";\n"
         Content += GenerateContent_SignalVariable_By_SignalList(MessageDict["SignalInfoList"],"extern ")
         Content += "\n"
+
+
+    Content += "extern "
 
     Content += "\n\n\n\n#endif\n"
     Content += r"/* ==================DevCAN_Message.h File End=========================== */"
@@ -210,8 +249,12 @@ def GenerateFile_SWC_By_MessageDictList(MessageDictList, FilePath):
     #     Content += "extern MessageType_" + MessageDict["MessageName"] + " Message_" + MessageDict["MessageName"] + ";\n"
     #     Content += GenerateContent_SignalVariable_By_SignalList(MessageDict["SignalInfoList"],"extern ")
     #     Content += "\n"
+    Content += "typedef uint16 DevCan_MailboxType; /* USER_INTEGRATION_CONFIG_CONTENT */ \n\n"
+
     Content += "extern void DevCan_SWC_INPUT(void);\n"
     Content += "extern void DevCan_SWC_OUTPUT(void);\n"
+
+    Content += "extern void DevCan_MainFunction_Tx(void);\n"
 
 
 
@@ -221,7 +264,7 @@ def GenerateFile_SWC_By_MessageDictList(MessageDictList, FilePath):
     with open(FilePath + "DevCAN_SWC.h", 'w') as file:
         file.write(Content)
 
-    ################################################################
+    ################################################################################################################################################################
     Content = r"/* ==================DevCAN_SWC.c File Start=========================== */"
     Content += "\n\n#include \"DevCAN_SWC.h\"\n\n\n\n"
 
@@ -236,19 +279,58 @@ def GenerateFile_SWC_By_MessageDictList(MessageDictList, FilePath):
     #     Content += GenerateContent_SignalVariable_By_SignalList(MessageDict["SignalInfoList"],"")
     #     Content += "\n\n"
 
-    Content += """void DevCan_SWC_INPUT(void)
-    {
+    Content += "#define DEVCAN_MAILBOX_TX_NUM   (3u) /* USER_INTEGRATION_CONFIG_CONTENT */ \n"
+    Content += "const DevCan_MailboxType DevCanMailboxTable[DEVCAN_MAILBOX_TX_NUM] = {\n"
+    Content += "    0u, /* USER_INTEGRATION_CONFIG_CONTENT */ \n"
+    Content += "    1u, /* USER_INTEGRATION_CONFIG_CONTENT */ \n"
+    Content += "    2u, /* USER_INTEGRATION_CONFIG_CONTENT */ \n"
+    Content += "};\n\n\n"
+
+
+
+
+    # Content += """void DevCan_SWC_INPUT(void)
+    # {
     
     
-    }
+    # }
 
     
-    void DevCan_SWC_OUTPUT(void)
-    {
+    # void DevCan_SWC_OUTPUT(void)
+    # {
     
     
-    }
-    """
+    # }\n\n
+    # """
+
+    Content += "static void DevCan_GetTxPduInfo(uint16 Index,Can_PduType *TxPdu)\n"
+    Content += "{\n"
+    Content += "\tswitch(Index)\n"
+    Content += "\t{\n"
+    TxMessageCnt = 0
+    for MessageDict in MessageDictList:
+        if MessageDict["MessageTxNode"] == "MCU":
+            Content += GenerateContent_TxPduInfo_By_MessageDict(TxMessageCnt,MessageDict)
+            TxMessageCnt += 1
+    Content += "\t}\n"
+    Content += "}\n\n\n"
+
+
+    Content += "#define DEVCAN_MESSAGE_TX_NUM\t(" + str(TxMessageCnt) + "u)\n"
+    Content += "void DevCan_MainFunction_Tx(void)\n"
+    Content += "{\n"
+    Content += "\tstatic uint16 MessageIndex = 0u;\n"
+    Content += "\tuint8 MailboxIndex = 0u;\n"
+    Content += "\tCan_PduType DevTxPdu = {.length=8u};\n"
+    Content += "\tfor(MailboxIndex = 0u; MailboxIndex < DEVCAN_MAILBOX_TX_NUM; MailboxIndex++)\n"
+    Content += "\t{\n"
+    Content += "\t\tDevCan_GetTxPduInfo(MessageIndex,&DevTxPdu);\n"
+    Content += "\t\tCan_Write(MailboxIndex, &DevTxPdu);\n"
+    Content += "\t\tMessageIndex++;\n"
+    Content += "\t\tif(MessageIndex >= DEVCAN_MESSAGE_TX_NUM)\n"
+    Content += "\t\t\tMessageIndex = 0u;\n"
+    Content += "\t}\n"
+    Content += "}\n\n\n"
 
 
 

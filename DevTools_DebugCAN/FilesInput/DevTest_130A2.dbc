@@ -1,0 +1,126 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DevPC MCU
+
+
+BO_ 80 MCU_DevPC_0x050: 8 MCU
+ SG_ AdcValTMotor : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageTMotor : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValTMotor : 32|32@1+ (0.01,0) [0|42949672.95] "ohm"  DevPC
+
+BO_ 81 MCU_DevPC_0x051: 8 MCU
+ SG_ AdcValTPcb : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageTPcb : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValTPcb : 32|32@1+ (0.01,0) [0|42949672.95] "ohm"  DevPC
+
+BO_ 82 MCU_DevPC_0x052: 8 MCU
+ SG_ AdcValTEth : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageTEth : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValTEth : 32|32@1+ (0.01,0) [0|42949672.95] "ohm"  DevPC
+
+BO_ 83 MCU_DevPC_0x053: 8 MCU
+ SG_ AdcValCurrentU1 : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageCurrentU1 : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValCurrentU1 : 32|32@1+ (0.001,-500) [-500|4294467.295] "A"  DevPC
+
+BO_ 84 MCU_DevPC_0x054: 8 MCU
+ SG_ AdcValCurrentV1 : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageCurrentV1 : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValCurrentV1 : 32|32@1+ (0.001,-500) [-500|4294467.295] "A"  DevPC
+
+BO_ 85 MCU_DevPC_0x055: 8 MCU
+ SG_ AdcValCurrentW1 : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageCurrentW1 : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValCurrentW1 : 32|32@1+ (0.001,-500) [-500|4294467.295] "A"  DevPC
+
+BO_ 86 MCU_DevPC_0x056: 8 MCU
+ SG_ AdcValCurrentU2 : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageCurrentU2 : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValCurrentU2 : 32|32@1+ (0.001,-500) [-500|4294467.295] "A"  DevPC
+
+BO_ 87 MCU_DevPC_0x057: 8 MCU
+ SG_ AdcValCurrentV2 : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageCurrentV2 : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValCurrentV2 : 32|32@1+ (0.001,-500) [-500|4294467.295] "A"  DevPC
+
+BO_ 88 MCU_DevPC_0x058: 8 MCU
+ SG_ AdcValCurrentW2 : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageCurrentW2 : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValCurrentW2 : 32|32@1+ (0.001,-500) [-500|4294467.295] "A"  DevPC
+
+BO_ 89 MCU_DevPC_0x059: 8 MCU
+ SG_ AdcValBusLine : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageBusLine : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValBusLine : 32|32@1+ (0.001,0) [0|4294967.295] "V"  DevPC
+
+BO_ 90 MCU_DevPC_0x05A: 8 MCU
+ SG_ AdcValIref2V5 : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageIref2V5 : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValIref2V5 : 32|32@1+ (0.001,0) [0|4294967.295] "V"  DevPC
+
+BO_ 91 MCU_DevPC_0x05B: 8 MCU
+ SG_ AdcValGate15V : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ VoltageGate15V : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyValGate15V : 32|32@1+ (0.001,0) [0|4294967.295] "V"  DevPC
+
+BO_ 92 MCU_DevPC_0x05C: 8 MCU
+ SG_ AdcVal15V : 0|16@1+ (1,0) [0|65535] ""  DevPC
+ SG_ Voltage15V : 16|16@1+ (1,0) [0|65535] "mV"  DevPC
+ SG_ PhyVal15V : 32|32@1+ (0.001,0) [0|4294967.295] "V"  DevPC
+
+
+
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+
+
+BA_ "GenMsgCycleTime" BO_ 80 100;
+BA_ "GenMsgCycleTime" BO_ 81 50;
+BA_ "GenMsgCycleTime" BO_ 82 100;
+BA_ "GenMsgCycleTime" BO_ 83 50;
+BA_ "GenMsgCycleTime" BO_ 84 100;
+BA_ "GenMsgCycleTime" BO_ 85 50;
+BA_ "GenMsgCycleTime" BO_ 86 100;
+BA_ "GenMsgCycleTime" BO_ 87 50;
+BA_ "GenMsgCycleTime" BO_ 88 100;
+BA_ "GenMsgCycleTime" BO_ 89 100;
+BA_ "GenMsgCycleTime" BO_ 90 50;
+BA_ "GenMsgCycleTime" BO_ 91 100;
+BA_ "GenMsgCycleTime" BO_ 92 50;

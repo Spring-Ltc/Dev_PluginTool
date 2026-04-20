@@ -71,7 +71,7 @@ extern float32	s_PhyValGate15V;
 extern float32	s_PhyValV15V;
 extern float32	s_PhyValV24V;
 
-extern 
+
 
 
 

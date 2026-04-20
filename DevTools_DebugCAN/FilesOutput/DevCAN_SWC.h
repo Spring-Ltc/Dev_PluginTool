@@ -5,6 +5,8 @@
 
 #include "DevCAN_Message.h"
 
+#include "Can.h"
+
 
 
 typedef uint16 DevCan_MailboxType; /* USER_INTEGRATION_CONFIG_CONTENT */ 

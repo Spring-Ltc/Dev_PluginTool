@@ -234,7 +234,7 @@ def GenerateFile_MessageVariable_By_MessageDictList(MessageDictList, FilePath):
         Content += "\n"
 
 
-    Content += "extern "
+
 
     Content += "\n\n\n\n#endif\n"
     Content += r"/* ==================DevCAN_Message.h File End=========================== */"
@@ -275,7 +275,8 @@ def GenerateFile_SWC_By_MessageDictList(MessageDictList, FilePath):
     Content = r"/* ==================DevCAN_SWC.h File Start=========================== */"
     Content += "\n\n#ifndef __DevCAN_SWC_H\n"
     Content += "#define __DevCAN_SWC_H\n\n"
-    Content += "#include \"DevCAN_Message.h\"\n\n\n\n"
+    Content += "#include \"DevCAN_Message.h\"\n\n"
+    Content += "#include \"Can.h\"\n\n\n\n"
 
     # for MessageDict in MessageDictList:
     #     Content += "extern MessageType_" + MessageDict["MessageName"] + " Message_" + MessageDict["MessageName"] + ";\n"
